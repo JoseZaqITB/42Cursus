@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 15:32:23 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/16 17:24:43 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:31:15 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void	bubble_sort(int argc, char *argv[])
 		i++;
 	}
 }
-
 
 int	main(int argc, char *argv[])
 {

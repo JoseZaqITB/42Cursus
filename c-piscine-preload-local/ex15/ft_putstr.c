@@ -6,12 +6,11 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 14:00:22 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/16 17:18:48 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:30:43 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
-
 
 void	ft_putstr(char *str)
 {
