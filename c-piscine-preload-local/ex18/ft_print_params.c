@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 14:24:53 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/16 15:29:23 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:19:44 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char *argv[])
 	while (i < argc)
 	{
 		ft_print_string(argv[i]);
-		ft_putchar("\n");
+		ft_putchar('\n');
 		i++;
 	}
 }

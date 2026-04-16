@@ -6,9 +6,22 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 15:32:23 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/16 16:06:03 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:24:43 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+
+void	ft_putchar(char c);
+
+void	ft_print_string(char *str)
+{
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
+}
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -44,7 +57,6 @@ void	bubble_sort(int argc, char *argv[])
 	}
 }
 
-//#include <stdio.h>
 
 int	main(int argc, char *argv[])
 {
@@ -54,7 +66,7 @@ int	main(int argc, char *argv[])
 	bubble_sort(argc, argv);
 	while (i < argc)
 	{
-		ft_putchar(argv[i]);
+		ft_print_string(argv[i]);
 		ft_putchar('\n');
 		i++;
 	}
