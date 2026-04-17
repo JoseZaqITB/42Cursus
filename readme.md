@@ -16,3 +16,18 @@ mkdir42() {
 }
 
 ```
+## VSCODE
+Usefull extensions:
+- 42 Header
+- norminette-42
+
+vscode settings ( norminette rules ):
+```JSON
+{
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.renderWhitespace": "all",
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+}
+```
