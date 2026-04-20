@@ -3,11 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 16:12:05 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/17 16:14:04 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/20 16:24:18 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define ABS(Value) (Value >= 0 ? (Value) : -(Value));
+#define ABS(Value) (Value >= 0 ? (Value) : -(Value))
