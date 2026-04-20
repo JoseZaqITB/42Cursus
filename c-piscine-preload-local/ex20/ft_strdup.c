@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 14:39:44 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/17 15:25:27 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/20 16:26:56 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strdup(char *src)
 	return (dpsrc);
 }
 
-/*
+
 #include <stdio.h>
 
 int	main(void)
@@ -52,4 +52,4 @@ int	main(void)
 	dpsrc = NULL;
 	return (0);
 }
-*/
+
