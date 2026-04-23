@@ -6,13 +6,12 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:25:09 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/23 12:32:42 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/04/23 13:05:14 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -37,26 +36,29 @@ void	ft_putstr(char *str, int fildes)
 int	print_file(char *path)
 {
 	char	*error;
-	char	buffer[101];
+	char	buffer[100];
 	int		ft;
 	int		read_bytes;
 
 	error = "Cannot read file.\n";
+	read_bytes = 1;
 	ft = open(path, O_RDWR);
 	if (ft == -1)
 	{
 		ft_putstr(error, 2);
 		return (1);
 	}
-	read_bytes = read(ft, buffer, 100);
-	if (read_bytes == -1)
+	while (read_bytes != 0)
 	{
-		ft_putstr(error, 2);
-		return (1);
+		read_bytes = read(ft, buffer, 100);
+		if (read_bytes == -1)
+		{
+			ft_putstr(error, 2);
+			return (1);
+		}
+		write(1, buffer, read_bytes);
 	}
-	buffer[read_bytes] = '\0';
 	close(ft);
-	ft_putstr(buffer, 1);
 	return (0);
 }
 
