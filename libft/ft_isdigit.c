@@ -6,11 +6,11 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 10:07:33 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 10:17:53 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/24 10:42:55 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	return ((c >= '0' && c <= '9'));
+	return (c >= '0' && c <= '9');
 }

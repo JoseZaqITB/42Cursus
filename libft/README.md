@@ -14,9 +14,16 @@ ccc main.c -L. -lft
 
 # Resources
 
-| Resource | Description                                           |
-| :------- | :---------------------------------------------------- |
-| man      | the manual you have in the terminal, part of the libc |
+| Resource                                     | Description                                           |
+| :------------------------------------------- | :---------------------------------------------------- |
+| man                                          | the manual you have in the terminal, part of the libc |
+| [ASCII 0-255](https://elcodigoascii.com.ar/) | the ascii code                                        |
+| [size_t](https://shorturl.at/wJ7dJ)          | why and when to use it                                |
+
+## Uses of IA
+- To answer specific doubts:
+  - why isascii(c) checks c to be a 7-bits char if 1 byte has 8-bits?
+  - where should I add the includes, in the c file or in the h file and then include the h file in the c file ?
 
 # Libft
 | Function                        | Description                              |
