@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/23 16:19:13 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/04/24 10:21:23 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,10 @@ int	main(void)
 	res = ft_isalpha('>');
 	printf("%d", res);
 
+	// is digit
+	printf("\nis digit: \n");
+	res = ft_isdigit('0');
+	printf("|%d|", res);
+	res = ft_isdigit('a');
+	printf("|%d|", res);
 }

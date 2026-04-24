@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 16:12:20 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/24 10:08:47 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/04/24 10:07:33 by yoseyusprog       #+#    #+#             */
+/*   Updated: 2026/04/24 10:17:53 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+int	ft_isdigit(int c)
+{
+	return ((c >= '0' && c <= '9'));
+}
