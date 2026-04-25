@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/24 15:43:00 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/25 13:24:52 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,26 @@ int	main(void)
 	// get pointer of the first char in s
 	printf("\n get pointer of the first |%c| in |%s|\n", c3, s3);
 	char *ptr= ft_strchr(s3,c3);
+	printf("|%s|", ptr);
+
+	// get pointer of the last char in s
+	char 	*s9 = "wiiws";
+	printf("\n get pointer of the last |%c| in |%s|\n", c3, s9);
+	ptr= ft_strrchr(s9,c3);
+	printf("|%s|", ptr);
+
+	// compare two strings until n
+	s8 = "aaa";
+	s9 = "aab";
+	int	n = 4;
+	printf("\n compare two strings until |%d|: (|%s|%s|)\n", n, s8, s9);
+	res = ft_strncmp(s8, s9, n);
+	printf("|%d|", res);
+
+	// get pointer of the first char in s
+	n  = 4;
+	printf("\n get pointer of the first |%c| in  the first %d bytes of |%s|\n", c3, n, s3);
+	ptr= ft_memchr(s3,c3, n);
 	printf("|%s|", ptr);
 }
 
