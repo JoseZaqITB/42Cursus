@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 11:03:35 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/27 11:15:56 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/27 12:32:45 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	if (size * nmemb > sizeof(int))
+	if (size > 0 && nmemb > (SIZE_MAX / size))
 		return (0);
 	if (size == 0 || nmemb == 0)
 		return (malloc(0));

@@ -6,13 +6,14 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:12:20 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/27 11:23:22 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/27 12:32:33 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -35,3 +36,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(char *src);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);

@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/27 11:23:59 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/27 12:17:25 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,11 +122,22 @@ int	main(void)
 	//strdup
 	char	*src = "perro con sarna y soda";
 	char	*dpsrc = ft_strdup(src);
+	printf("\n duplicate string: (|%s|)\n",src);
 
-	printf("%s | %s\n", src, dpsrc);
+	printf("\nduplicated: |%s|\n", dpsrc);
 
 	free(dpsrc);
 	dpsrc = NULL;
+
+	// create a substring
+	printf("\nCreate a substring from |%s| starting at |%d| with size |%d|\n",src, 5, 10);
+	s7 = ft_substr(src, 5, 10);
+	printf("\n SUBSTR: |%s|\n", s7);
+
+	// create a substring
+	printf("\nCreate a string that appends |%s| |%s|\n",s8,s9);
+	s7 = ft_strjoin(s8, s9);
+	printf("\n new String: |%s|\n", s7);
 }
 
 
