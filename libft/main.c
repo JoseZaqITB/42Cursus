@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/27 12:17:25 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/27 16:39:33 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,12 @@ int	main(void)
 	// create a substring
 	printf("\nCreate a string that appends |%s| |%s|\n",s8,s9);
 	s7 = ft_strjoin(s8, s9);
+	printf("\n new String: |%s|\n", s7);
+
+	//
+	s9 = "ab";
+	printf("\nCreate a string that copy |%s| deleting all |%s|\n",src,s9);
+	s7 = ft_strtrim(src, s9);
 	printf("\n new String: |%s|\n", s7);
 }
 
