@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/25 13:24:52 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/27 10:00:24 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,22 @@ int	main(void)
 	printf("\n get pointer of the first |%c| in  the first %d bytes of |%s|\n", c3, n, s3);
 	ptr= ft_memchr(s3,c3, n);
 	printf("|%s|", ptr);
+
+	// compare two memory areas until n
+	s8 = "aabaacdd";
+	s9 = "aab";
+	n = 9;
+	printf("\n compare two memory areas until |%d|: (|%s|%s|)\n", n, s8, s9);
+	res = ft_memcmp(s8, s9, n);
+	printf("|%d|", res);
+
+	// search for a substring until n
+	s8 = "aabaacdd";
+	s9 = "aba";
+	n = 4;
+	printf("\n search for a substring until |%d|: (|%s|%s|)\n", n, s8, s9);
+	s7 = ft_strnstr(s8, s9, n);
+	printf("|%s|", s7);
 }
 
 
