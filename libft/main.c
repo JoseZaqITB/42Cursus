@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/27 10:00:24 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/27 11:23:59 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,18 @@ int	main(void)
 	printf("\n search for a substring until |%d|: (|%s|%s|)\n", n, s8, s9);
 	s7 = ft_strnstr(s8, s9, n);
 	printf("|%s|", s7);
+
+	// allocate memory with calloc
+	// todo
+
+	//strdup
+	char	*src = "perro con sarna y soda";
+	char	*dpsrc = ft_strdup(src);
+
+	printf("%s | %s\n", src, dpsrc);
+
+	free(dpsrc);
+	dpsrc = NULL;
 }
 
 
