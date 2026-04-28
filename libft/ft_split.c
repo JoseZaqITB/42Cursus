@@ -6,13 +6,13 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:32:54 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/28 10:35:14 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/28 11:55:08 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	getnextword(char *str, int start, char c)
+static int	getnextword(char *str, int start, char c)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ int	getnextword(char *str, int start, char c)
 	return (start + i + 1);
 }
 
-int	getelembydel(char *str, char del)
+static int	getelembydel(char *str, char del)
 {
 	int	nelem;
 	int	i;
@@ -50,7 +50,18 @@ int	getelembydel(char *str, char del)
 	return (nelem);
 }
 
-void	completelist(char **list, int len, char *str, char del)
+static void	free_all(char **list)
+{
+	int	i;
+
+	i = -1;
+	while (list[++i])
+		free(list[i]);
+	free(list);
+	list = 0;
+}
+
+static void	completelist(char **list, int len, char *str, char del)
 {
 	int	i;
 	int	subi;
@@ -65,6 +76,11 @@ void	completelist(char **list, int len, char *str, char del)
 		while (str[subi + nstrelem] != del)
 			nstrelem++;
 		list[i] = ft_substr(str, subi, nstrelem);
+		if (!list[i])
+		{
+			free_all(list);
+			return ;
+		}
 		nstrelem = 0;
 		i++;
 	}
@@ -78,7 +94,9 @@ char	**ft_split(char const *s, char c)
 
 	str = (char *)s;
 	nelem = getelembydel(str, c);
-	list = calloc(nelem + 1, sizeof(char *));
+	list = ft_calloc(nelem + 1, sizeof(char *));
+	if (!list)
+		return (0);
 	list[nelem] = 0;
 	completelist(list, nelem, str, c);
 	return (list);

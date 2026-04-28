@@ -54,5 +54,7 @@ ccc main.c -L. -lft
 | [ft_substr(str, start, len)](./ft_substr.c) | it returns a substring from `str` starting at `start` char with  `len` size, null if memory allocation fails                                                         |
 | [ft_strjoin(s1, s2)](./ft_strjoin.c)        | it returns a new string concatenating `s1` and `s2`, null if memory allocation fails                                                                                 |
 | [ft_split(s, c)](./ft_split.c)              | it returns a set of substrings given by the split of the string `s` using a delimiter `c`, the last item is a null pointer                                           |
+| [ft_itoa(n)](./ft_itoa.c)                   | it returns a string that represents the number `n`                                                                                                                   |
+| [ft_strmapi(s, fn)](./ft_strmapi.c)         | it returns a string with all chars of `s` but mapped using `fn` function                                                                                             |
 
 

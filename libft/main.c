@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/28 10:39:14 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/28 12:10:09 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #include "libft.h"
 
 void	testft(char *title, char c1, char c2, int (*f)(int));
+
+char	fn(unsigned int i, char c)
+{
+	return (c + i / 5);
+};
 
 int	main(void)
 {
@@ -155,6 +160,15 @@ int	main(void)
 		printf("|%s|\n",*list);
 		list++;
 	}
+	//
+	n = -1234128391;
+	printf("\nCreate a string of a number |%d|\n",n);
+	s7 = ft_itoa(n);
+	printf("\n Number String: |%s|\n", s7);
+	//
+	printf("\nMapped a string |%s|\n",s8);
+	s7 = ft_strmapi(s8, &fn);
+	printf("\n Mapped String: |%s|\n", s7);
 }
 
 
