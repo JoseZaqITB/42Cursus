@@ -56,5 +56,6 @@ ccc main.c -L. -lft
 | [ft_split(s, c)](./ft_split.c)              | it returns a set of substrings given by the split of the string `s` using a delimiter `c`, the last item is a null pointer                                           |
 | [ft_itoa(n)](./ft_itoa.c)                   | it returns a string that represents the number `n`                                                                                                                   |
 | [ft_strmapi(s, fn)](./ft_strmapi.c)         | it returns a string with all chars of `s` but mapped using `fn` function                                                                                             |
+| [ft_striteri(s, fn)](./ft_striteri.c)       | it iterates on `s` and apply the `fn` function on every character                                                                                                    |
 
 

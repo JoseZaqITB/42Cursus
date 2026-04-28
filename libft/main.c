@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/28 12:10:09 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/28 13:12:35 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@ char	fn(unsigned int i, char c)
 {
 	return (c + i / 5);
 };
+
+
+void	fn2(unsigned int i, char *c)
+{
+	*c += i;
+}
 
 int	main(void)
 {
@@ -169,6 +175,11 @@ int	main(void)
 	printf("\nMapped a string |%s|\n",s8);
 	s7 = ft_strmapi(s8, &fn);
 	printf("\n Mapped String: |%s|\n", s7);
+
+	//
+	printf("\nIterate and apply a function |%s|\n",str);
+	ft_striteri(str, &fn2);
+	printf("\n Iterated String: |%s|\n", str);
 }
 
 
