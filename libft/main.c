@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/27 16:39:33 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/28 10:39:14 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,6 +144,17 @@ int	main(void)
 	printf("\nCreate a string that copy |%s| deleting all |%s|\n",src,s9);
 	s7 = ft_strtrim(src, s9);
 	printf("\n new String: |%s|\n", s7);
+
+	//
+	s8 = "-Hola-perro--sofa---maria---";
+	c1 = '-';
+	printf("\nSplit a string |%s| with delimeter |%c|\n",s8,c1);
+	char **list = ft_split(s8, c1);
+	while (*list)
+	{
+		printf("|%s|\n",*list);
+		list++;
+	}
 }
 
 

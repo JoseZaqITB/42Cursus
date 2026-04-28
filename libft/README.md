@@ -53,5 +53,6 @@ ccc main.c -L. -lft
 | [ft_strdup(str)](./ft_strdup.c)             | it duplicates ´str´ and saves and return a pointer to the new string                                                                                                 |
 | [ft_substr(str, start, len)](./ft_substr.c) | it returns a substring from `str` starting at `start` char with  `len` size, null if memory allocation fails                                                         |
 | [ft_strjoin(s1, s2)](./ft_strjoin.c)        | it returns a new string concatenating `s1` and `s2`, null if memory allocation fails                                                                                 |
+| [ft_split(s, c)](./ft_split.c)              | it returns a set of substrings given by the split of the string `s` using a delimiter `c`, the last item is a null pointer                                           |
 
 
