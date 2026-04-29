@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/29 16:07:46 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/29 19:02:15 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,6 +201,24 @@ int	main(void)
 	printf("|");
 	ft_putnbr_fd(n, 1);
 	printf("|");
+
+	/* LISTAS ENLAZADAS */
+	printf("\n***** LISTAS ENLAZADAS *****\n");
+	//
+	printf("\ncreate a new node with this content |%s|\n",s8);
+	t_list *nodeptr = ft_lstnew(s8);
+	printf("content: %s", (char *)nodeptr->content);
+	printf("\nnext: %s", (char *)nodeptr->next);
+	//
+	printf("\nAdd a new node with this content: |%s|. And loop the list \n",s9);
+	t_list *nodeptr2 = ft_lstnew(s9);
+	ft_lstadd_front(&nodeptr, nodeptr2);
+	while (nodeptr)
+	{
+		printf("\ncontent: %s", (char *)nodeptr->content);
+		//printf("\nnext: %s", (char *)nodeptr->next->content);
+		nodeptr = nodeptr->next;
+	}
 }
 
 
