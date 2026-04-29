@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/29 19:02:15 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/29 19:57:00 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,14 +211,30 @@ int	main(void)
 	printf("\nnext: %s", (char *)nodeptr->next);
 	//
 	printf("\nAdd a new node with this content: |%s|. And loop the list \n",s9);
+	t_list **lst = &nodeptr;
 	t_list *nodeptr2 = ft_lstnew(s9);
-	ft_lstadd_front(&nodeptr, nodeptr2);
-	while (nodeptr)
+	ft_lstadd_front(lst, nodeptr2);
+	while (*lst)
 	{
-		printf("\ncontent: %s", (char *)nodeptr->content);
-		//printf("\nnext: %s", (char *)nodeptr->next->content);
-		nodeptr = nodeptr->next;
+		printf("\ncontent: %s", (char *)(*lst)->content);
+		lst = &(*lst)->next;
 	}
+	//
+	printf("\nGet the size of a list\n");
+	n = ft_lstsize(nodeptr);
+	printf("size: %d",n);
+	//
+	printf("\nGet the last node of a list\n");
+	printf("\nFirst: %s",(char *)nodeptr->content);
+	printf("\nLast: %s",(char *)nodeptr->next->content);
+	printf("\nRes : %s",(char *)ft_lstlast(nodeptr)->content);
+	//
+	t_list *nodeptr3 = ft_lstnew("I should be the last node :)");
+	printf("\nAdd a node |%s| at the end of a list\n",(char *)nodeptr3->content);
+	lst = &nodeptr;
+	printf("\noldLast: %s",(char *)ft_lstlast(*lst)->content);
+	ft_lstadd_back(lst, nodeptr3);
+	printf("\nnewLast: %s",(char *)ft_lstlast(*lst)->content);
 }
 
 

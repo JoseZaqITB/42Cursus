@@ -63,6 +63,9 @@ ccc main.c -L. -lft
 | [ft_putendl_fd(s, fd)](./ft_putendl_fd.c)            | it uses a file descriptor `fd` to add a string `s` + `\n`                                                                                                            |
 | [ft_putnbr_fd(s, fd)](./ft_putnbr_fd.c)              | it uses a file descriptor `fd` to add a number `n`                                                                                                                   |
 | [ft_lstnew(cnt)](./ft_lstnew.c)                      | it creates a new node and returns a pointer to it, use `cnt` as content and `null` as next by default                                                                |
-| [ft_lstadd_front(lst, newnode)](./ft_lstadd_front.c) | it creates a new node `newnode` and add it to the list `lst`                                                                                                         |
+| [ft_lstadd_front(lst, newnode)](./ft_lstadd_front.c) | it creates a new node `newnode` and add it to the list `lst` at the first position                                                                                   |
+| [ft_lstsize(lst)](./ft_lstsize.c)                    | it returns the number of nodes of the list `lst`                                                                                                                     |
+| [ft_lstlast(lst)](./ft_lstlast.c)                    | it returns the last node of the list `lst`                                                                                                                           |
+| [ft_lstadd_back(lst)](./ft_lstadd_back.c)            | it creates a new node `newnode` and add it to the list `lst` at the end                                                                                              |
 
 
