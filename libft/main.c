@@ -6,12 +6,13 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/28 13:12:35 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/29 16:07:46 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
+#include <fcntl.h>
 
 void	testft(char *title, char c1, char c2, int (*f)(int));
 
@@ -180,6 +181,26 @@ int	main(void)
 	printf("\nIterate and apply a function |%s|\n",str);
 	ft_striteri(str, &fn2);
 	printf("\n Iterated String: |%s|\n", str);
+
+	//
+	printf("\nAdd a char using a file descriptor |%c|\n",c1);
+	ft_putchar_fd(c1, 1);
+
+	//
+	printf("\nAdd a string using a file descriptor |%s|\n",s8);
+	ft_putstr_fd(s8, 1);
+
+	//
+	printf("\nAdd a string + new line using a file descriptor |%s|\n",s9);
+	printf("|");
+	ft_putendl_fd(s9, 1);
+	printf("|");
+
+	//
+	printf("\nAdd a number + new line using a file descriptor |%s|\n",s9);
+	printf("|");
+	ft_putnbr_fd(n, 1);
+	printf("|");
 }
 
 

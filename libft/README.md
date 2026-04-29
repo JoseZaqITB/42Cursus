@@ -25,6 +25,7 @@ ccc main.c -L. -lft
   - why isascii(c) checks c to be a 7-bits char if 1 byte has 8-bits?
   - where should I add the includes, in the c file or in the h file and then include the h file in the c file ?
   - what does "void s[.n]" mean and why the linter throws an error ?
+  - I call a function that uses write() to print in the standard output, but i use the printf() before and after the function calling. why the two prints by printf() are printed after the function print.
 
 # Libft
 | Function                                    | Description                                                                                                                                                          |
@@ -57,5 +58,9 @@ ccc main.c -L. -lft
 | [ft_itoa(n)](./ft_itoa.c)                   | it returns a string that represents the number `n`                                                                                                                   |
 | [ft_strmapi(s, fn)](./ft_strmapi.c)         | it returns a string with all chars of `s` but mapped using `fn` function                                                                                             |
 | [ft_striteri(s, fn)](./ft_striteri.c)       | it iterates on `s` and apply the `fn` function on every character                                                                                                    |
+| [ft_putchar_fd(c, fd)](./ft_putchar_fd.c)   | it uses a file descriptor `fd` to add a char `c`                                                                                                                     |
+| [ft_putstr_fd(s, fd)](./ft_putstr_fd.c)     | it uses a file descriptor `fd` to add a string `s`                                                                                                                   |
+| [ft_putendl_fd(s, fd)](./ft_putendl_fd.c)   | it uses a file descriptor `fd` to add a string `s` + `\n`                                                                                                            |
+| [ft_putnbr_fd(s, fd)](./ft_putnbr_fd.c)     | it uses a file descriptor `fd` to add a number `n`                                                                                                                   |
 
 
