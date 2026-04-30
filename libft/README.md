@@ -67,3 +67,6 @@ ccc main.c -L. -lft
 | [ft_lstsize(lst)](./ft_lstsize.c)                    | it returns the number of nodes of the list `lst`                                                                                                                     |
 | [ft_lstlast(lst)](./ft_lstlast.c)                    | it returns the last node of the list `lst`                                                                                                                           |
 | [ft_lstadd_back(lst)](./ft_lstadd_back.c)            | it creates a new node `newnode` and add it to the list `lst` at the end                                                                                              |
+| [ft_lstdelone(lst, del())](./ft_lstdelone.c)         | it frees the memory of the content using the function `del` and also the memory of the node itself                                                                   |
+| [ft_lstclear(lst, del())](./ft_lstclear.c)           | it frees the memory of all the nodes of a list and the list itself                                                                                                   |
+| [ft_lstiter(lst, fn())](./ft_lstiter.c)              | it iterates all the list nodes and apply the function `fn` to each content                                                                                           |

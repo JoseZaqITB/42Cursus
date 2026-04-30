@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/30 14:32:22 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:51:15 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 #include "libft.h"
 #include <fcntl.h>
 
+void	fnnode(void *content);
 void	testft(char *title, char c1, char c2, int (*f)(int));
+void	del(void *content);
+void	*fnnodemap(void *content);
 
 char	fn(unsigned int i, char c)
 {
@@ -243,8 +246,57 @@ int	main(void)
 	printf("\noldLast: %s",(char *)ft_lstlast(*lst)->content);
 	ft_lstadd_back(lst, nodeptr3);
 	printf("\nnewLast: %s",(char *)ft_lstlast(*lst)->content);
+
+	//
+	t_list *nodeptr4 = ft_lstnew("I should be the last node :)");
+	printf("\nlibera un nodo |%s|\n",(char *)nodeptr3->content);
+	ft_lstdelone(nodeptr4, &del);
+	nodeptr4 = 0;
+	if (!nodeptr4)
+		printf("\nnode eliminated");
+	else
+		printf("\nnode not eliminated");
+
+	//
+	printf("\nlibera una lista completa |%s|\n",(char *)nodeptr->content);
+	ft_lstclear(&nodeptr, &del);
+	if (!nodeptr)
+		printf("\nnode eliminated");
+	else
+		printf("\nnode not eliminated");
+
+	//
+	nodeptr2 = ft_lstnew("I should be the first node :)");
+	nodeptr3 = ft_lstnew("I should be the last node :(");
+	ft_lstadd_back(&nodeptr2, nodeptr3);
+	printf("\nITERAR UNA LISTA Y APLICAR UNA FUNCION QUE IMPRIMA LO DEL CONTENIDO |%s|\n",(char *)nodeptr2->content);
+	ft_lstiter(nodeptr2, fnnode);
+
+	//
+	printf("\n MAPPEAR UNA LISTA, APLICAR UNA FUNCION, Y GUARDARLO EN UNA NUEVA LISTA |%s|\n",(char *)nodeptr2->content);
+	*lst = ft_lstmap(nodeptr2, fnnodemap, del);
+	printf("mapped list: ");
+	while (*lst)
+	{
+		printf("\ncontent: %s", (char *)(*lst)->content);
+		lst = &(*lst)->next;
+	}
 }
 
+void	*fnnodemap(void *content)
+{
+	return ((void *)ft_strjoin(content, "Soy otro weh :)"));
+}
+
+void	fnnode(void *content)
+{
+	printf("\nIterando esto: %s", (char *)content);
+}
+void	del(void *content)
+{
+	printf("freeing |%s| content...",(char *)content);
+	//free(content);
+}
 
 void	testft(char *title, char c1, char c2, int (*f)(int))
 {

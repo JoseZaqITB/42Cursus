@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 19:44:12 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/30 18:48:26 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/04/30 17:21:07 by yoseyusprog       #+#    #+#             */
+/*   Updated: 2026/04/30 17:59:08 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*lastnode;
+	t_list	*currlist;
+	t_list	*nextlist;
 
-	if (!*lst)
-		*lst = new;
-	else
+	currlist = *lst;
+	nextlist = currlist;
+	while (nextlist)
 	{
-		lastnode = ft_lstlast(*lst);
-		lastnode->next = new;
+		currlist = nextlist;
+		(*del)((currlist)->content);
+		nextlist = (currlist)->next;
+		free(currlist);
 	}
+	*lst = 0;
 }
