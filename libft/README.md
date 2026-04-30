@@ -41,7 +41,7 @@ ccc main.c -L. -lft
 | [ft_memcpy(dest, src, n)](./ft_memcpy.c)             | it copies the first `n` bytes of `src` to `dest`                                                                                                                     |
 | [ft_memmove(dest, src, n)](./ft_memmove.c)           | same as memcpy, but it works even when the 2 strings overlaps                                                                                                        |
 | [ft_strlcpy(dest, src, n)](./ft_strlcpy.c)           | to complete                                                                                                                                                          |
-| [ft_strlcat(dest, src, n)](./ft_strlcat.c)           | to complete                                                                                                                                                          |
+| [ft_strlcat(dest, src, n)](./ft_strlcat.c)           | it apppends the string `src` in `dest`. `size` is the total size of `dest`, it returns the size of final string                                                      |
 | [ft_toupper(c)](./ft_toupper.c)                      | it converts `c` to uppercase                                                                                                                                         |
 | [ft_tolower(c)](./ft_tolower.c)                      | it converts `c` to lowercase                                                                                                                                         |
 | [ft_strchr(s, c)](./ft_strchr.c)                     | it returns the pointer of the FIRST `c` in `s`                                                                                                                       |
@@ -67,5 +67,3 @@ ccc main.c -L. -lft
 | [ft_lstsize(lst)](./ft_lstsize.c)                    | it returns the number of nodes of the list `lst`                                                                                                                     |
 | [ft_lstlast(lst)](./ft_lstlast.c)                    | it returns the last node of the list `lst`                                                                                                                           |
 | [ft_lstadd_back(lst)](./ft_lstadd_back.c)            | it creates a new node `newnode` and add it to the list `lst` at the end                                                                                              |
-
-

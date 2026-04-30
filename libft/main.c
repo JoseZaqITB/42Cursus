@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/29 19:57:00 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/04/30 14:32:22 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(void)
 	testft("is ascii?", c1, c2, ft_isalpha);
 	testft("is ascii?", c1, c2, ft_isdigit);
 	testft("is ascii?", c1, c2, ft_isalnum);
-	testft("is ascii?", c1, 200, ft_isascii);
+	testft("is ascii?", c1, (char)200, ft_isascii);
 	testft("is printable?", 31, ' ', ft_isprint);
 
 	int	res = 0;
@@ -77,6 +77,14 @@ int	main(void)
 	printf("|%s|", s7);
 	printf("|%s|", s8);
 
+
+	// append a string to another
+	char *sbuff = "Chai               ";
+	printf("\n append a string to another: (%s, %s)\n", s5, sbuff);
+	int n = ft_strlcat(s5, sbuff, 15);
+	printf("Appended String:%s\n", sbuff);
+	printf("|%d|", n);
+
 	// to upper
 	char c3 = 'w';
 	printf("\n change |%c| to upper version\n", c3);
@@ -101,7 +109,7 @@ int	main(void)
 	// compare two strings until n
 	s8 = "aaa";
 	s9 = "aab";
-	int	n = 4;
+	n = 4;
 	printf("\n compare two strings until |%d|: (|%s|%s|)\n", n, s8, s9);
 	res = ft_strncmp(s8, s9, n);
 	printf("|%d|", res);
