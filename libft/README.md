@@ -40,7 +40,7 @@ ccc main.c -L. -lft
 | [ft_bzero(s, n)](./ft_bzero.c)                       | it changes the first `n` bytes of `s` for `\0` char                                                                                                                  |
 | [ft_memcpy(dest, src, n)](./ft_memcpy.c)             | it copies the first `n` bytes of `src` to `dest`                                                                                                                     |
 | [ft_memmove(dest, src, n)](./ft_memmove.c)           | same as memcpy, but it works even when the 2 strings overlaps                                                                                                        |
-| [ft_strlcpy(dest, src, n)](./ft_strlcpy.c)           | to complete                                                                                                                                                          |
+| [ft_strlcpy(dest, src, n)](./ft_strlcpy.c)           | it copies up to `n` - 1 chars of a NULL-terminated string `src` to `dst`. It will return the total length of the new string                                          |
 | [ft_strlcat(dest, src, n)](./ft_strlcat.c)           | it apppends the string `src` in `dest`. `size` is the total size of `dest`, it returns the size of final string                                                      |
 | [ft_toupper(c)](./ft_toupper.c)                      | it converts `c` to uppercase                                                                                                                                         |
 | [ft_tolower(c)](./ft_tolower.c)                      | it converts `c` to lowercase                                                                                                                                         |
@@ -50,6 +50,7 @@ ccc main.c -L. -lft
 | [ft_memchr(s1, c, n)](./ft_memchr.c)                 | it scans the first `n` bytes of `s` for `c`, it returns the pointer of the first `c` or  `null` if not found                                                         |
 | [ft_memcmp(s1, s2, n)](./ft_memcmp.c)                | it scans the first `n` bytes of `s1` and `s2` and returns `s1` - `s2`, if n = 0 it returns 0                                                                         |
 | [ft_strnstr(s1, s2, len)](./ft_strnstr.c)            | it scans the first `len` chars of `s1` for `s2` and returns the pointer of the first char or `null` if not found                                                     |
+| [ft_atoi(an)](./ft_atoi.c)                           | it returns the integer equivalent of an ascii integer `an`. It detects spaces, signs and stops when no number character detected                                     |
 | [ft_calloc(nelem, size)](./ft_calloc.c)              | it saves enough memory for an array of ´nelem´ elements of ´size´ bytes and returns a pointer to the allocated memory, null if integer overflow or 0 if a param is 0 |
 | [ft_strdup(str)](./ft_strdup.c)                      | it duplicates ´str´ and saves and return a pointer to the new string                                                                                                 |
 | [ft_substr(str, start, len)](./ft_substr.c)          | it returns a substring from `str` starting at `start` char with  `len` size, null if memory allocation fails                                                         |
@@ -70,3 +71,4 @@ ccc main.c -L. -lft
 | [ft_lstdelone(lst, del())](./ft_lstdelone.c)         | it frees the memory of the content using the function `del` and also the memory of the node itself                                                                   |
 | [ft_lstclear(lst, del())](./ft_lstclear.c)           | it frees the memory of all the nodes of a list and the list itself                                                                                                   |
 | [ft_lstiter(lst, fn())](./ft_lstiter.c)              | it iterates all the list nodes and apply the function `fn` to each content                                                                                           |
+| [ft_lstmap(lst, fn(), del)](./ft_lstmap.c)           | it iterates the list and apply the function `fn` to each node and save changes to a new list. It return the new list. `del` is used to delete nodes when needed      |

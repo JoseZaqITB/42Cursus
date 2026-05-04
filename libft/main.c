@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/04/30 18:51:15 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/04 18:05:03 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	fnnode(void *content);
 void	testft(char *title, char c1, char c2, int (*f)(int));
 void	del(void *content);
 void	*fnnodemap(void *content);
+void	testatoi(char *nptr);
 
 char	fn(unsigned int i, char c)
 {
@@ -81,12 +82,35 @@ int	main(void)
 	printf("|%s|", s8);
 
 
-	// append a string to another
-	char *sbuff = "Chai               ";
-	printf("\n append a string to another: (%s, %s)\n", s5, sbuff);
-	int n = ft_strlcat(s5, sbuff, 15);
+	// STRLCAT
+	char scat[] = "FUENTE";
+	char sbuff[7 + 6] = "DESTINO";
+	printf("\n append a string to another: (%s, %s)\n", scat, sbuff);
+	int n = ft_strlcat(sbuff, scat, 13);
 	printf("Appended String:%s\n", sbuff);
 	printf("|%d|", n);
+
+	// STRLCPY
+	printf("\n--- STRLCPY ---\n");
+	printf("\n Copy a string to another: (|%s|, |%s|)\n", scat, sbuff);
+	n = ft_strlcpy(sbuff, scat, 19);
+	printf("Copied String:%s\n", sbuff);
+	printf("Returned value: |%d|", n);
+	printf("\n Copy a string to another: (|%s|, |%s|)\n", scat, sbuff);
+	n = ft_strlcpy(sbuff, scat, 6);
+	printf("Copied String:%s\n", sbuff);
+	printf("Returned value: |%d|", n);
+
+	printf("\n Copy a string to another: (||, |%s|)\n", sbuff);
+	n = ft_strlcpy(sbuff, "", 6);
+	printf("Copied String:%s\n", sbuff);
+	printf("Returned value: |%d|", n);
+
+	char sbuff2[0];
+	printf("\n Copy a string to another: (|%s|, |%s|)\n", scat, sbuff2);
+	n = ft_strlcpy(sbuff2, scat, 0);
+	printf("Copied String:%s\n", sbuff2);
+	printf("Returned value: |%d|", n);
 
 	// to upper
 	char c3 = 'w';
@@ -138,6 +162,14 @@ int	main(void)
 	printf("\n search for a substring until |%d|: (|%s|%s|)\n", n, s8, s9);
 	s7 = ft_strnstr(s8, s9, n);
 	printf("|%s|", s7);
+
+	// ATOI
+	printf("\n--- ATOI ---\n");
+	testatoi("1234");
+	testatoi("-1234");
+	testatoi("   +1234dogs");
+	testatoi("somewordsdog124");
+	testatoi("2147483648");
 
 	// allocate memory with calloc
 	// todo
@@ -307,4 +339,11 @@ void	testft(char *title, char c1, char c2, int (*f)(int))
 	printf("|%d|", res);
 	res = (*f)(c2);
 	printf("|%d|", res);
+}
+
+void	testatoi(char *nptr)
+{
+	printf("\nAscii integer: (%s)\n", nptr);
+	int n = ft_atoi(nptr);
+	printf("Integer: |%d|", n);
 }
