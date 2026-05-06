@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 19:21:41 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/29 19:26:48 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/04/24 11:18:57 by yoseyusprog       #+#    #+#             */
+/*   Updated: 2026/05/06 18:25:34 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_lstsize(t_list *lst)
+size_t	ft_strlen(const char *s)
 {
-	int	nnode;
+	int	i;
 
-	nnode = 0;
-	printf("%s", (char *)lst->content);
-	while (lst)
+	i = 0;
+	while (s[i])
 	{
-		lst = lst->next;
-		nnode++;
+		i++;
 	}
-
-	return (nnode);
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:32:54 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/28 11:55:08 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/06 18:23:44 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ static int	getelembydel(char *str, char del)
 		if (i == -1)
 			break ;
 	}
-
 	return (nelem);
 }
 

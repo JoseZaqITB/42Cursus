@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 19:37:58 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/29 19:40:55 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/04/29 19:21:41 by yoseyusprog       #+#    #+#             */
+/*   Updated: 2026/05/06 18:24:23 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
+#include <stdio.h>
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	while (lst->next)
+	int	nnode;
+
+	nnode = 0;
+	printf("%s", (char *)lst->content);
+	while (lst)
 	{
 		lst = lst->next;
+		nnode++;
 	}
-
-	return (lst);
+	return (nnode);
 }

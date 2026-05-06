@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 15:20:22 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/27 16:39:20 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/06 18:25:05 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	nsubelems(char *s1, char *subelems)
 	int	i;
 	int	j;
 	int	nelem;
-
 
 	i = 0;
 	j = 0;

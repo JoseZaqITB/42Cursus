@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 11:56:20 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/28 12:03:33 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/04/29 19:37:58 by yoseyusprog       #+#    #+#             */
+/*   Updated: 2026/05/06 18:24:17 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*mappedstr;
-	char	*str;
-	int		len;
-	int		i;
-
-	i = 0;
-	str = (char *)s;
-	len = ft_strlen(str);
-	mappedstr = calloc(len + 1, sizeof(char));
-	if (!mappedstr)
-		return (0);
-	mappedstr[len] = '\0';
-
-	while (str[i])
+	while (lst->next)
 	{
-		mappedstr[i] = (*f)(i, str[i]);
-		i++;
+		lst = lst->next;
 	}
-	return (mappedstr);
+	return (lst);
 }
