@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 12:07:50 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/25 12:17:05 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/06 19:31:46 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 
 	str = (char *)s;
-	i = ft_strlen(s);
+	i = ft_strlen(s) + 1;
 	while (i--)
 	{
 		if (str[i] == c)

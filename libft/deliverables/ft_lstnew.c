@@ -6,12 +6,11 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 18:17:36 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/29 18:30:16 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/06 20:46:28 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {

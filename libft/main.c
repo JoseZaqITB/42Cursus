@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/04 18:05:03 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/06 20:53:50 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,21 @@ int	main(void)
 
 
 	// STRLCAT
-	char scat[] = "FUENTE";
-	char sbuff[7 + 6] = "DESTINO";
+	printf("\n--- STRLCAT ---\n");
+	char scat[] = "rrrr";
+	char sbuff[7 + 5];
 	printf("\n append a string to another: (%s, %s)\n", scat, sbuff);
 	int n = ft_strlcat(sbuff, scat, 13);
+	printf("Appended String:%s\n", sbuff);
+	printf("|%d|", n);
+
+	printf("\n append a string to another: (lorem ipsum dolor sit amet, %s)\n", sbuff);
+	n = ft_strlcat(sbuff, "lorem ipsum dolor sit amet", 1);
+	printf("Appended String:%s\n", sbuff);
+	printf("|%d|", n);
+
+	printf("\n append a string to another: (lorem ipsum dolor sit amet, %s)\n", sbuff);
+	n = ft_strlcat(sbuff, "lorem ipsum dolor sit amet", 15);
 	printf("Appended String:%s\n", sbuff);
 	printf("|%d|", n);
 
@@ -103,6 +114,11 @@ int	main(void)
 
 	printf("\n Copy a string to another: (||, |%s|)\n", sbuff);
 	n = ft_strlcpy(sbuff, "", 6);
+	printf("Copied String:%s\n", sbuff);
+	printf("Returned value: |%d|", n);
+
+	printf("\n Copy a string to another: (|lorem ipsum dolor sit amet|, |%s|)\n", sbuff);
+	n = ft_strlcpy(sbuff, "lorem ipsum dolor sit amet", 0);
 	printf("Copied String:%s\n", sbuff);
 	printf("Returned value: |%d|", n);
 
@@ -134,9 +150,9 @@ int	main(void)
 	printf("|%s|", ptr);
 
 	// compare two strings until n
-	s8 = "aaa";
-	s9 = "aab";
-	n = 4;
+	s8 = "test\0";
+	s9 = "test\200";
+	n = 6;
 	printf("\n compare two strings until |%d|: (|%s|%s|)\n", n, s8, s9);
 	res = ft_strncmp(s8, s9, n);
 	printf("|%d|", res);

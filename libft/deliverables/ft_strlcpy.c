@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 16:43:45 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/04 17:06:27 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/06 20:46:39 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	source = (char *)src;
 	srclen = ft_strlen(src);
 	i = 0;
-	while (i < size - 1 && source[i])
+	if (size == 0)
+		return (srclen);
+	while (i < (size - 1) && source[i])
 	{
 		dst[i] = source[i];
 		i++;
