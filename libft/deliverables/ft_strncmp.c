@@ -6,12 +6,11 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 12:22:14 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/06 20:56:30 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 08:47:59 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -24,7 +23,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while (str1[i] == str2[i] && i < n - 1)
 	{
-		printf("|%c|%c|\n", str1[i], str2[i]);
 		if (!str1[i])
 			return (str1[i] - str2[i]);
 		i++;

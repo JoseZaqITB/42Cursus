@@ -6,32 +6,61 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 15:20:22 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/06 18:25:05 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 11:10:00 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	cispart(char c, char *subelems)
+{
+	int	j;
+
+	j = 0;
+	while (subelems[j])
+	{
+		if (c == subelems[j])
+			break ;
+		else if (!subelems[j + 1])
+			return (0);
+		j++;
+	}
+	return (1);
+}
+
+int	strnelem(int *nelem, char c, char *subelems)
+{
+	int	j;
+
+	j = 0;
+	while (subelems[j])
+	{
+		if (c == subelems[j])
+			(*nelem)++;
+		else if (!subelems[j + 1])
+			return (-1);
+		j++;
+	}
+	return (0);
+}
+
 int	nsubelems(char *s1, char *subelems)
 {
 	int	i;
-	int	j;
 	int	nelem;
 
 	i = 0;
-	j = 0;
 	nelem = 0;
 	while (s1[i])
 	{
-		while (subelems[j])
-		{
-			if (s1[i] == subelems[j])
-				nelem++;
-			j++;
-		}
-		j = 0;
+		if (strnelem(&nelem, s1[i], subelems) == -1)
+			break ;
 		i++;
 	}
+	i = ft_strlen(s1);
+	while (--i)
+		if (strnelem(&nelem, s1[i], subelems) == -1)
+			break ;
 	return (nelem);
 }
 
@@ -39,28 +68,28 @@ void	deleteelems(char *newstr, char *src, char *subelems)
 {
 	int	i;
 	int	j;
-	int	k;
-	int	len;
 
-	i = -1;
-	j = -1;
-	k = 0;
-	len = ft_strlen(subelems);
-	while (src[++i])
+	i = 0;
+	j = 0;
+	j = ft_strlen(src);
+	while (src[i])
 	{
-		while (subelems[++j])
-		{
-			if (src[i] == subelems[j])
-				break ;
-		}
-		if (j == len)
-		{
-			newstr[k] = src[i];
-			k++;
-		}
-		j = -1;
+		if (!cispart(src[i], subelems))
+			break ;
+		i++;
 	}
-	newstr[++k] = '\0';
+	while (j--)
+	{
+		if (!cispart(src[j], subelems))
+			break ;
+	}
+	while (i <= j)
+	{
+		*newstr = src[i];
+		newstr++;
+		i++;
+	}
+	*newstr = '\0';
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
