@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/06 20:53:50 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 13:31:41 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -226,8 +226,15 @@ int	main(void)
 		printf("|%s|\n",*list);
 		list++;
 	}
+
+	list = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	while (*list)
+	{
+		printf("|%s|\n",*list);
+		list++;
+	}
 	//
-	n = -1234128391;
+	n = -2147483648;
 	printf("\nCreate a string of a number |%d|\n",n);
 	s7 = ft_itoa(n);
 	printf("\n Number String: |%s|\n", s7);

@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:32:54 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/06 18:23:44 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 12:55:51 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ static int	getnextword(char *str, int start, char c)
 	{
 		i++;
 	}
+	if (!str[start + i + 1])
+		return (-1);
 	return (start + i + 1);
 }
 
@@ -37,14 +39,18 @@ static int	getelembydel(char *str, char del)
 	int	nelem;
 	int	i;
 
-	nelem = -1;
+	nelem = 0;
 	i = 0;
-	while (str[i])
+	if (str[0] && str[0] != del)
 	{
 		nelem++;
+	}
+	while (str[i])
+	{
 		i = getnextword(str, i, del);
 		if (i == -1)
 			break ;
+		nelem++;
 	}
 	return (nelem);
 }
@@ -69,9 +75,10 @@ static void	completelist(char **list, int len, char *str, char del)
 	i = 0;
 	nstrelem = 0;
 	subi = 0;
+	if (str[0] == del)
+		subi = getnextword(str, subi, del);
 	while (i < len)
 	{
-		subi = getnextword(str, subi, del);
 		while (str[subi + nstrelem] != del)
 			nstrelem++;
 		list[i] = ft_substr(str, subi, nstrelem);
@@ -80,6 +87,7 @@ static void	completelist(char **list, int len, char *str, char del)
 			free_all(list);
 			return ;
 		}
+		subi = getnextword(str, subi, del);
 		nstrelem = 0;
 		i++;
 	}
