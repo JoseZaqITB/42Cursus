@@ -6,13 +6,13 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 15:20:22 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/07 11:10:00 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 17:47:39 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	cispart(char c, char *subelems)
+static int	cispart(char c, char *subelems)
 {
 	int	j;
 
@@ -28,7 +28,7 @@ int	cispart(char c, char *subelems)
 	return (1);
 }
 
-int	strnelem(int *nelem, char c, char *subelems)
+static int	strnelem(int *nelem, char c, char *subelems)
 {
 	int	j;
 
@@ -44,7 +44,7 @@ int	strnelem(int *nelem, char c, char *subelems)
 	return (0);
 }
 
-int	nsubelems(char *s1, char *subelems)
+static int	nsubelems(char *s1, char *subelems)
 {
 	int	i;
 	int	nelem;
@@ -64,7 +64,7 @@ int	nsubelems(char *s1, char *subelems)
 	return (nelem);
 }
 
-void	deleteelems(char *newstr, char *src, char *subelems)
+static void	deleteelems(char *newstr, char *src, char *subelems)
 {
 	int	i;
 	int	j;
@@ -101,8 +101,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	str1 = (char *)s1;
 	str2 = (char *)set;
+	if (!s1 || !set)
+		return (0);
 	nelem = ft_strlen(str1) - nsubelems(str1, str2) + 1;
 	ptr = ft_calloc(nelem, sizeof(char));
+	if (!ptr)
+		return (0);
 	deleteelems(ptr, str1, str2);
 	return (ptr);
 }

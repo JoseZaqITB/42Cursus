@@ -6,13 +6,13 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 09:15:52 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/27 09:58:38 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 17:31:30 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	checksubstr(char *big, char *little, int index, size_t len)
+static int	checksubstr(char *big, char *little, int index, size_t len)
 {
 	size_t	j;
 
@@ -33,7 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	s1 = (char *)big;
 	s2 = (char *)little;
 	i = 0;
-	if (!s2[1])
+	if (!s2[0])
 		return (s1);
 	while (big[i] && i < len)
 	{

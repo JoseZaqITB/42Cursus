@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/07 13:31:41 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 16:56:10 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,11 @@ int	main(void)
 	n = ft_strlcat(sbuff, "lorem ipsum dolor sit amet", 15);
 	printf("Appended String:%s\n", sbuff);
 	printf("|%d|", n);
+
+	printf("\n append a string to another: (CCCCCCCCC, %s, -1)\n", sbuff);
+	n = ft_strlcat(sbuff, "CCCCCCCCC", -1);
+	printf("|%d|", n);
+	printf("Appended String:%s\n", sbuff);
 
 	// STRLCPY
 	printf("\n--- STRLCPY ---\n");

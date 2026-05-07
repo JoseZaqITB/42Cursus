@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 13:45:58 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/06 19:24:12 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/07 16:59:42 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t siz)
 			break ;
 		i++;
 	}
-	while (source && i < siz - 1)
+	while (*source && i < siz - 1)
 	{
 		dst[i] = *source;
 		source++;
