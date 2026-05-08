@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 11:28:07 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/07 18:06:43 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/08 16:50:06 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
 	char	*ptr;
 	size_t	actualsize;
 
@@ -25,10 +24,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > actualsize)
 		len = actualsize;
-	str = (char *)s;
-	ptr = ft_calloc(len + 1, sizeof(char));
+	ptr = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
 		return (0);
-	ft_strlcpy(ptr, str + start, len + 1);
+	ft_strlcpy(ptr, s + start, len + 1);
 	return (ptr);
 }

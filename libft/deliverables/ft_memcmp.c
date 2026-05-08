@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 08:45:49 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/27 09:04:45 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/08 16:46:57 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*str1;
 	unsigned char	*str2;
 
+	if (n == 0)
+		return (0);
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
@@ -25,7 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		i++;
 	}
-	if (n == 0)
-		return (0);
 	return (str1[i] - str2[i]);
 }

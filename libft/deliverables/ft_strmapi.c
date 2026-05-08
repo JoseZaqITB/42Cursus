@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 11:56:20 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/06 18:23:26 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/08 16:42:55 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	str = (char *)s;
 	len = ft_strlen(str);
-	mappedstr = calloc(len + 1, sizeof(char));
+	mappedstr = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!mappedstr)
 		return (0);
 	mappedstr[len] = '\0';

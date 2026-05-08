@@ -6,7 +6,7 @@
 /*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 14:33:38 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 15:10:50 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/08 16:06:19 by yoseyusprog      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*s;
 	char	*d;
 
+	if (!dest && !src)
+		return (0);
 	s = (char *)src;
 	d = (char *)dest;
 	if (d < s)
