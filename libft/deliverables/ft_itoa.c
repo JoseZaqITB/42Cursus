@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 11:03:47 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/07 13:46:11 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/09 12:30:10 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ char	*ft_itoa(int n)
 
 	len = lenint(n);
 	nstr = ft_calloc(len + 1, sizeof(char));
-	nstr[len] = '\0';
 	if (!nstr)
 		return (0);
+	nstr[len] = '\0';
 	if (n == 0)
 		nstr[0] = '0';
 	if (n < 0)
