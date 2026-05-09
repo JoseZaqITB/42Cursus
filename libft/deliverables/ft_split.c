@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 17:32:54 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/07 12:55:51 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/09 17:29:12 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static void	completelist(char **list, int len, char *str, char del)
 		subi = getnextword(str, subi, del);
 	while (i < len)
 	{
-		while (str[subi + nstrelem] != del)
+		while (str[subi + nstrelem] && str[subi + nstrelem] != del)
 			nstrelem++;
 		list[i] = ft_substr(str, subi, nstrelem);
 		if (!list[i])
