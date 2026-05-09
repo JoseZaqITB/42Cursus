@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/07 16:56:10 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/09 13:16:45 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -222,8 +222,8 @@ int	main(void)
 	printf("\n new String: |%s|\n", s7);
 
 	//
-	s8 = "-Hola-perro--sofa---maria---";
-	c1 = '-';
+	s8 = "tripolluete";
+	c1 = ' ';
 	printf("\nSplit a string |%s| with delimeter |%c|\n",s8,c1);
 	char **list = ft_split(s8, c1);
 	while (*list)

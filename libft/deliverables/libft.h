@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:12:20 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/04 17:34:49 by yoseyusprog      ###   ########.fr       */
+/*   Updated: 2026/05/09 17:09:28 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stddef.h>
+# include <stdlib.h>
+# include <stdint.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -66,3 +67,4 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+#endif
