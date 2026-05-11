@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 16:41:37 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/11 16:41:38 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/11 18:38:58 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 
 	currlist = *lst;
 	nextlist = currlist;
+	if (!lst || !del)
+		return ;
 	while (nextlist)
 	{
 		currlist = nextlist;
-		(*del)((currlist)->content);
 		nextlist = (currlist)->next;
-		free(currlist);
+		ft_lstdelone(currlist, del);
 	}
 	*lst = 0;
 }

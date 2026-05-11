@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:13:38 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/09 13:16:45 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/11 17:53:14 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -334,7 +334,7 @@ int	main(void)
 
 	//
 	printf("\n MAPPEAR UNA LISTA, APLICAR UNA FUNCION, Y GUARDARLO EN UNA NUEVA LISTA |%s|\n",(char *)nodeptr2->content);
-	*lst = ft_lstmap(nodeptr2, fnnodemap, del);
+	*lst = ft_lstmap(nodeptr2, fnnodemap, &del);
 	printf("mapped list: ");
 	while (*lst)
 	{
