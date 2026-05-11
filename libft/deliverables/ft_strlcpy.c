@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 16:43:45 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/06 20:46:39 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:43:38 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:43:39 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

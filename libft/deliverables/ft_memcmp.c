@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/27 08:45:49 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/08 16:46:57 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:42:23 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:25 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

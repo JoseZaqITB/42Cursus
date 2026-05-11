@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/27 11:50:11 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/08 16:14:15 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:43:29 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:43:29 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

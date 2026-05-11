@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/25 12:45:51 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/07 09:05:48 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:42:19 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:19 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

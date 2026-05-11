@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 14:07:21 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/08 16:04:07 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:42:31 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:31 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

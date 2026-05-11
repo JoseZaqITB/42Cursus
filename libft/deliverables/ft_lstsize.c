@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 19:21:41 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/06 20:47:39 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:42:13 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:14 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

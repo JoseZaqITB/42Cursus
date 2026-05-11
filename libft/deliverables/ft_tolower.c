@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 15:24:13 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 15:25:27 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:44:24 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:44:25 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

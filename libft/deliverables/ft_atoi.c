@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 17:34:11 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/04 18:06:13 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:39:30 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:39:34 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

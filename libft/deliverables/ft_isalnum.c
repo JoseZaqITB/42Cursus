@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 10:41:51 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 10:44:03 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:40:45 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:40:46 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

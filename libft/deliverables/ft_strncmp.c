@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/25 12:22:14 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/07 08:47:59 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:43:56 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:43:58 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

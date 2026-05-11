@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 15:51:06 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/29 15:52:52 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:43:04 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:43:04 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

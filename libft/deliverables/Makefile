@@ -56,7 +56,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 # bonus: all
 # crear archivos .o
-%.o: %.c Makefile
+%.o: %.c Makefile libft.h
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 # Compilar la biblioteca
 $(NAME): $(OBJS)

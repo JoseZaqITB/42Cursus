@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/25 12:07:50 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/07 17:12:20 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:44:08 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:44:08 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

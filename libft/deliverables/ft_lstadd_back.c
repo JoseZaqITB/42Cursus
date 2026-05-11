@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 19:44:12 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/30 18:48:26 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:41:20 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:41:21 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

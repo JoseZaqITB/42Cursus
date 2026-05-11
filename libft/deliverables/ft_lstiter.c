@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/30 18:02:03 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/30 18:04:40 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:41:47 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:41:48 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

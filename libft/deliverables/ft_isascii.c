@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 10:50:49 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 11:01:19 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:40:59 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:41:01 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

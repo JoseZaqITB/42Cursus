@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/27 15:20:22 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/08 15:55:21 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:44:15 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:44:16 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

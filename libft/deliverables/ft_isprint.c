@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 11:15:21 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 11:16:51 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:41:09 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:41:10 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

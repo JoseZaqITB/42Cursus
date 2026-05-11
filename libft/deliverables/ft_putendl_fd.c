@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 15:54:45 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/29 15:56:38 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:42:52 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:52 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

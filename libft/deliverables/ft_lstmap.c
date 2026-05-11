@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/30 18:11:35 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/06 18:23:06 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:41:59 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:00 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

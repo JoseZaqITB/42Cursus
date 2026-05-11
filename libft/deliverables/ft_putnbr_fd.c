@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 16:00:51 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/08 16:40:37 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:42:56 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:57 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

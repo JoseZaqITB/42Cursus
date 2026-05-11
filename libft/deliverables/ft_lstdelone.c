@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/30 16:48:56 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/30 17:51:48 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:41:42 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:41:43 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

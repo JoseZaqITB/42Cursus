@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 11:56:20 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/05/08 16:42:55 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:43:49 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:43:49 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 12:53:04 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/28 13:14:21 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:43:23 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:43:24 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

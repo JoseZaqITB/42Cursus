@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 15:37:57 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/06 18:24:07 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:40:51 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:40:52 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

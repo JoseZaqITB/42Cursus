@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/30 17:21:07 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/30 17:59:08 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:41:37 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:41:38 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

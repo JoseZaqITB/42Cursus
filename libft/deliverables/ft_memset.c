@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 12:01:13 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 13:56:09 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:42:43 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:42:43 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

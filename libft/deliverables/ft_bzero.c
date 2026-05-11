@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoseyusprogrammer <yoseyusprogrammer@st    +#+  +:+       +#+        */
+/*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 14:00:53 by yoseyusprog       #+#    #+#             */
-/*   Updated: 2026/04/24 14:05:34 by yoseyusprog      ###   ########.fr       */
+/*   Created: 2026/05/11 16:39:43 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/11 16:39:44 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
