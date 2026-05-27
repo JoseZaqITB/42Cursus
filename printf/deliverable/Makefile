@@ -8,20 +8,21 @@ AR = ar -rcs
 INC_DIR = .
 # lib settings
 LIB_DIR = ./lib/libft
-LIB_NAME = ft.a #libft.a
-LDLFLAGS = -L$(LIB_DIR) -L$(LIB_NAME)
+LIB_A = $(LIB_DIR)/libft.a
 # add all flagas
 CFLAGS += -I$(LIB_DIR) -I$(INC_DIR)
 # obtener archivos fuente del directorio srcs
-SRCS =	ft_printf.c
+SRCS =	ft_printf.c \
+	ft_putnbr_count.c \
+	ft_putstr_count.c \
 # obtener todos los .o (generados despues)
 OBJS = $(SRCS:.c=.o)
 
 # regla by default
-all: build_lib $(NAME)
+all: $(LIB_A) $(NAME)
 
 # compile libft
-build_lib:
+$(LIB_A):
 	$(MAKE) -C $(LIB_DIR)
 
 # bonus: all
@@ -29,8 +30,9 @@ build_lib:
 %.o: %.c Makefile libftprintf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 # Compilar la biblioteca
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $^
+$(NAME): $(LIB_A) $(OBJS)
+	cp $(LIB_A) $(NAME)
+	$(AR) $(NAME) $(OBJS)
 # remover todos los .0
 clean:
 	rm -f $(OBJS)
@@ -40,7 +42,7 @@ fclean: clean
 	rm -f $(NAME)
 	$(MAKE) -C $(LIB_DIR) fclean
 # llamar a fclean y hacer un make
-re: fclean $(NAME) build_lib
+re: fclean $(NAME) $(LIB_A)
 
 # ensure not to call files with the same name as the functions
 .PHONY: clean fclean re all

@@ -1,42 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_count.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/12 17:58:29 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/22 16:43:08 by jzaquina         ###   ########.fr       */
+/*   Created: 2026/05/22 16:35:10 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/22 16:40:07 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	printvar(char type, va_list vargs)
+int	ft_putstr_count(char *s)
 {
 	int	count;
 
 	count = 0;
-	if (type == 'd')
-		count = ft_putnbr_count(va_arg(vargs, int));
-
-	return (count);
-}
-
-int	ft_printf(char const *str, ...)
-{
-	int		n;
-	va_list	vargs;
-
-	n = 0;
-	va_start(vargs, str);
-
-	while (*str)
+	while (*s)
 	{
-		if (*str == '%')
-			printvar(*(++str), vargs);
-		str++;
+		ft_putchar_fd(*s++, 1);
+		count++;
 	}
-	va_end(vargs);
-	return (n);
+	return (count);
 }

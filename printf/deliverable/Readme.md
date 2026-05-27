@@ -34,7 +34,7 @@ make re
 
 ## execute the main.c
 ```
-ccc main.c -L. -lft -I.
+ccc main.c -L. -lftprintf -I.
 ```
 
 # Resources
@@ -48,6 +48,6 @@ ccc main.c -L. -lft -I.
 | [Complemento a dos ](youtube.com/watch?v=K-IJTvEDBYw&t=2)                | How C handles negative numbers                        |
 
 ## Uses of IA
-
+- how to compile a makefile from a makefile.
 
 # Libft

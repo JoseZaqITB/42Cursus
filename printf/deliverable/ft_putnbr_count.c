@@ -1,42 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_count.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/12 17:58:29 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/22 16:43:08 by jzaquina         ###   ########.fr       */
+/*   Created: 2026/05/22 16:20:31 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/27 16:16:15 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	printvar(char type, va_list vargs)
+int	ft_putnbr_count(int n)
 {
-	int	count;
+	char	*ns;
+	int		len;
 
-	count = 0;
-	if (type == 'd')
-		count = ft_putnbr_count(va_arg(vargs, int));
-
-	return (count);
-}
-
-int	ft_printf(char const *str, ...)
-{
-	int		n;
-	va_list	vargs;
-
-	n = 0;
-	va_start(vargs, str);
-
-	while (*str)
-	{
-		if (*str == '%')
-			printvar(*(++str), vargs);
-		str++;
-	}
-	va_end(vargs);
-	return (n);
+	ns = ft_itoa(n);
+	len = ft_putstr_count(ns);
+	return (len);
 }
