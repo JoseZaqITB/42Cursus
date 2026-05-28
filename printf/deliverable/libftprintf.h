@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 18:14:59 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/27 16:20:33 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/28 19:40:08 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,6 @@
 int		ft_printf(char const *s, ...);
 int		ft_putnbr_count(int n);
 int		ft_putstr_count(char *s);
+int		ft_putunbr_count(unsigned int n, int count);
+int	ft_putnbrhex_count(unsigned int n, int count, int lower);
 #endif

@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_count.c                                  :+:      :+:    :+:   */
+/*   ft_putnbrhex_count.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/22 16:35:10 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/28 15:46:12 by jzaquina         ###   ########.fr       */
+/*   Created: 2026/05/28 19:19:34 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/28 20:00:22 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putstr_count(char *s)
+int	ft_putnbrhex_count(unsigned int n, int count, int lower)
 {
-	int	count;
+	int	cnt;
 
-	count = 0;
-	while (*s)
+	cnt = 0;
+	if (n >= 16)
 	{
-		ft_putchar_fd(*s++, 1);
-		count++;
+		cnt = ft_putnbrhex_count(n / 16, ++count, lower);
+		if (lower)
+			ft_putchar_fd("0123456789abcdef"[n % 16], 1);
+		else
+			ft_putchar_fd("0123456789ABCDEF"[n % 16], 1);
 	}
-	return (count);
+	else
+	{
+		if (lower)
+			ft_putchar_fd("0123465789abcdef"[n], 1);
+		else
+			ft_putchar_fd("0123465789ABCDEF"[n], 1);
+		cnt = ++count;
+	}
+	return (cnt);
 }

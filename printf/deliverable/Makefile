@@ -15,6 +15,8 @@ CFLAGS += -I$(LIB_DIR) -I$(INC_DIR)
 SRCS =	ft_printf.c \
 	ft_putnbr_count.c \
 	ft_putstr_count.c \
+	ft_putunbr_count.c \
+	ft_putnbrhex_count.c
 # obtener todos los .o (generados despues)
 OBJS = $(SRCS:.c=.o)
 

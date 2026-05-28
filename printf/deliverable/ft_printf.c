@@ -6,21 +6,34 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:58:29 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/22 16:43:08 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/28 19:43:18 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+#include <stdio.h>
 
 static int	printvar(char type, va_list vargs)
 {
-	int	count;
+	int	c;
 
-	count = 0;
-	if (type == 'd')
-		count = ft_putnbr_count(va_arg(vargs, int));
+	c = 1;
+	if (type == 'c')
+		ft_putchar_fd((char)va_arg(vargs, int), 1);
+	else if (type == 's')
+		c = ft_putstr_count(va_arg(vargs, char *));
 
-	return (count);
+	else if (type == 'd' || type == 'i')
+		c = ft_putnbr_count(va_arg(vargs, int));
+	else if (type == 'u')
+		c = ft_putunbr_count(va_arg(vargs, unsigned int), 0);
+	else if (type == 'x')
+		c = ft_putnbrhex_count(va_arg(vargs, unsigned int), 0, 1);
+	else if (type == 'X')
+		c = ft_putnbrhex_count(va_arg(vargs, unsigned int), 0, 0);
+	else if (type == '%')
+		ft_putchar_fd('%', 1);
+	return (c);
 }
 
 int	ft_printf(char const *str, ...)
@@ -34,7 +47,12 @@ int	ft_printf(char const *str, ...)
 	while (*str)
 	{
 		if (*str == '%')
-			printvar(*(++str), vargs);
+			n += printvar(*(++str), vargs);
+		else
+		{
+			ft_putchar_fd(*str, 1);
+			n++;
+		}
 		str++;
 	}
 	va_end(vargs);

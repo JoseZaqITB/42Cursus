@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_count.c                                  :+:      :+:    :+:   */
+/*   ft_putunbr_count.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/22 16:35:10 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/28 15:46:12 by jzaquina         ###   ########.fr       */
+/*   Created: 2026/05/28 17:23:53 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/28 19:03:58 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putstr_count(char *s)
+int	ft_putunbr_count(unsigned int n, int count)
 {
-	int	count;
+	int	cnt;
 
-	count = 0;
-	while (*s)
+	cnt = 0;
+	if (n >= 10)
 	{
-		ft_putchar_fd(*s++, 1);
-		count++;
+		cnt = ft_putunbr_count(n / 10, ++count);
+		ft_putchar_fd(((n % 10) + '0'), 1);
 	}
-	return (count);
+	else
+	{
+		ft_putchar_fd((n + '0'), 1);
+		cnt = ++count;
+	}
+	return (cnt);
 }

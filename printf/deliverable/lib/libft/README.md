@@ -53,6 +53,7 @@ ccc main.c -L. -lft -I.
   - where should I add the includes, in the c file or in the h file and then include the h file in the c file ?
   - what does "void s[.n]" mean and why the linter throws an error ?
   - I call a function that uses write() to print in the standard output, but i use the printf() before and after the function calling. why the two prints by printf() are printed after the function print.
+  - how a sign and unsigned number work internally?
 
 # Libft
 | Function                                             | Description                                                                                                                                                          |
