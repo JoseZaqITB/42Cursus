@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 19:19:34 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/29 13:29:41 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/29 13:53:57 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_putnbrhex_count(unsigned int n, int count, int lower)
 	else
 	{
 		if (lower)
-			ft_putchar_fd("0123465789abcdef"[n], 1);
+			ft_putchar_fd("0123456789abcdef"[n], 1);
 		else
-			ft_putchar_fd("0123465789ABCDEF"[n], 1);
+			ft_putchar_fd("0123456789ABCDEF"[n], 1);
 		cnt = ++count;
 	}
 	return (cnt);

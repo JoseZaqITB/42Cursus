@@ -29,8 +29,13 @@ void	tests(void)
 	int	n2;
 
 	printhint();
+	//
 	n = printf("+: %s\n", "Random string");
 	n2 = ft_printf("-: %s\n", "Random string");
+	returncmp(n, n2);
+	//
+	n = printf("+: NULL %s NULL \n", NULL);
+	n2 = ft_printf("-: NULL %s NULL \n", NULL);
 	returncmp(n, n2);
 }
 
@@ -42,6 +47,10 @@ void	testp(void)
 	printhint();
 	n = printf("+: %p\n", &n);
 	n2 = ft_printf("-: %p\n", &n);
+	returncmp(n, n2);
+	//
+	n = printf("+: %p %p\n", 0, 0);
+	n2 = ft_printf("-: %p %p\n", 0, 0);
 	returncmp(n, n2);
 }
 
@@ -87,6 +96,10 @@ void	testx(void)
 	n = printf("+: %x\n", 255);
 	n2 = ft_printf("-: %x\n", 255);
 	returncmp(n, n2);
+	//
+	n = printf("+: %x|%x|%x\n", 99, 100, 101);
+	n2 = ft_printf("-: %x|%x|%x\n", 99, 100, 101);
+	returncmp(n, n2);
 }
 
 void	testbx(void)
@@ -111,6 +124,17 @@ void	testpctg(void)
 	returncmp(n, n2);
 }
 
+void	testmix(void)
+{
+	int	n;
+	int	n2;
+
+	printhint();
+	n = printf("+: Oli: %s | %u | %c | %d | %i | %x | %X | %p | %u\n chai \n","string", -1, '$', 4.1, 4.1, 345, 101, &n, -1);
+	n2 = ft_printf("-: Oli: %s | %u | %c | %d | %i | %x | %X | %p | %u\n chai \n","string", -1, '$', 4.1, 4.1, 345, 101, &n, -1);
+	returncmp(n, n2);
+}
+
 
 int	main(void)
 {
@@ -129,6 +153,7 @@ int	main(void)
 			"7. %%x\n"
 			"8. %%X\n"
 			"9. %%%%\n"
+			"10. mix\n"
 			"0. end\n"
 			);
 		scanf("%d", &in);
@@ -151,6 +176,8 @@ int	main(void)
 			testbx();
 		else if (in == 9)
 			testpctg();
+		else if (in == 10)
+			testmix();
 		else if (in == 0)
 			return (0);
 		else

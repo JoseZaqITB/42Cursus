@@ -20,5 +20,5 @@ int		ft_putnbr_count(int n);
 int		ft_putstr_count(char *s);
 int		ft_putunbr_count(unsigned int n, int count);
 int		ft_putnbrhex_count(unsigned int n, int count, int lower);
-int		ft_putptr_count(unsigned long n, int count);
+int		ft_putptr_count(unsigned long n);
 #endif

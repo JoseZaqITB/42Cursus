@@ -6,20 +6,20 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 12:45:25 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/29 13:29:41 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/29 13:51:12 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putptr_count(unsigned long n, int count)
+int	ft_putptrrec_count(unsigned long n, int count)
 {
 	int	cnt;
 
 	cnt = 0;
 	if (n >= 16)
 	{
-		cnt = ft_putptr_count(n / 16, ++count);
+		cnt = ft_putptrrec_count(n / 16, ++count);
 		ft_putchar_fd("0123456789abcdef"[n % 16], 1);
 	}
 	else
@@ -29,4 +29,18 @@ int	ft_putptr_count(unsigned long n, int count)
 		cnt += ++count;
 	}
 	return (cnt);
+}
+
+int	ft_putptr_count(unsigned long n)
+{
+	int	count;
+
+	count = 0;
+	if (!n)
+	{
+		count = ft_putstr_count("(nil)");
+		return (count);
+	}
+	count = ft_putptrrec_count(n, count);
+	return (count);
 }
