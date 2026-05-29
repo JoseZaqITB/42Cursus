@@ -1,5 +1,5 @@
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 void	returncmp(int n, int n2)
@@ -31,6 +31,17 @@ void	tests(void)
 	printhint();
 	n = printf("+: %s\n", "Random string");
 	n2 = ft_printf("-: %s\n", "Random string");
+	returncmp(n, n2);
+}
+
+void	testp(void)
+{
+	int	n;
+	int	n2;
+
+	printhint();
+	n = printf("+: %p\n", &n);
+	n2 = ft_printf("-: %p\n", &n);
 	returncmp(n, n2);
 }
 
@@ -111,6 +122,7 @@ int	main(void)
 			"---MAIN MENU---\n"
 			"1. %%c\n"
 			"2. %%s\n"
+			"3. %%p\n"
 			"4. %%d\n"
 			"5. %%i\n"
 			"6. %%u\n"
@@ -125,7 +137,8 @@ int	main(void)
 			testc();
 		else if (in == 2)
 			tests();
-
+		else if (in == 3)
+			testp();
 		else if (in == 4)
 			testd();
 		else if (in == 5)

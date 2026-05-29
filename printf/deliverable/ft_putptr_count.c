@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putptr_count.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/12 18:14:59 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/28 19:40:08 by jzaquina         ###   ########.fr       */
+/*   Created: 2026/05/29 12:45:25 by jzaquina          #+#    #+#             */
+/*   Updated: 2026/05/29 13:29:41 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
-# include "./lib/libft/libft.h"
-# include <stdarg.h>
+#include "ft_printf.h"
 
+int	ft_putptr_count(unsigned long n, int count)
+{
+	int	cnt;
 
-int		ft_printf(char const *s, ...);
-int		ft_putnbr_count(int n);
-int		ft_putstr_count(char *s);
-int		ft_putunbr_count(unsigned int n, int count);
-int	ft_putnbrhex_count(unsigned int n, int count, int lower);
-#endif
+	cnt = 0;
+	if (n >= 16)
+	{
+		cnt = ft_putptr_count(n / 16, ++count);
+		ft_putchar_fd("0123456789abcdef"[n % 16], 1);
+	}
+	else
+	{
+		cnt += ft_putstr_count("0x");
+		ft_putchar_fd("0123465789abcdef"[n], 1);
+		cnt += ++count;
+	}
+	return (cnt);
+}

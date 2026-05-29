@@ -6,11 +6,11 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:58:29 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/28 19:43:18 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/29 13:33:02 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 static int	printvar(char type, va_list vargs)
@@ -22,7 +22,8 @@ static int	printvar(char type, va_list vargs)
 		ft_putchar_fd((char)va_arg(vargs, int), 1);
 	else if (type == 's')
 		c = ft_putstr_count(va_arg(vargs, char *));
-
+	else if (type == 'p')
+		c = ft_putptr_count(va_arg(vargs, unsigned long), 0);
 	else if (type == 'd' || type == 'i')
 		c = ft_putnbr_count(va_arg(vargs, int));
 	else if (type == 'u')
@@ -43,7 +44,6 @@ int	ft_printf(char const *str, ...)
 
 	n = 0;
 	va_start(vargs, str);
-
 	while (*str)
 	{
 		if (*str == '%')

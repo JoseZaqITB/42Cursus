@@ -6,11 +6,11 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 17:23:53 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/28 19:03:58 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/05/29 13:29:41 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putunbr_count(unsigned int n, int count)
 {

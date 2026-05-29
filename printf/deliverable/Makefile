@@ -16,7 +16,8 @@ SRCS =	ft_printf.c \
 	ft_putnbr_count.c \
 	ft_putstr_count.c \
 	ft_putunbr_count.c \
-	ft_putnbrhex_count.c
+	ft_putnbrhex_count.c \
+	ft_putptr_count.c
 # obtener todos los .o (generados despues)
 OBJS = $(SRCS:.c=.o)
 
@@ -29,7 +30,7 @@ $(LIB_A):
 
 # bonus: all
 # crear archivos .o
-%.o: %.c Makefile libftprintf.h
+%.o: %.c Makefile ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 # Compilar la biblioteca
 $(NAME): $(LIB_A) $(OBJS)
