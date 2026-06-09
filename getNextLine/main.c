@@ -11,10 +11,12 @@ void	testall(void)
 
 	fd = open("./testall.txt", O_RDWR);
 	printf("fd: %d\n", fd);
-	line = "";
+	while (line)
+	{
+		line = "";
 		line = get_next_line(fd);
-		printf("%s", line);
-	free(line);
+		printf("|%s|\n", line);
+	}
 	close(fd);
 }
 

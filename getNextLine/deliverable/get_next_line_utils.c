@@ -6,17 +6,11 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:48:48 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/09 14:43:57 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/09 16:54:59 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-void	add_substr(char *tempbuff, char *buffer, int endindex)
-{
-	tempbuff = ft_substr(tempbuff, 0, endindex + 1);
-	buffer = append_str(buffer, tempbuff);
-}
 
 int	ft_strlen(char *str)
 {
@@ -101,10 +95,12 @@ char	*append_str(char *str1, char str2[])
 	int		str1_len;
 	int		str2_len;
 	char	*res;
+	char	*baseres;
 
 	str1_len = ft_strlen(str1);
 	str2_len = ft_strlen(str2);
-	res = malloc((str1_len * str2_len + 1) * sizeof(char));
+	res = malloc((str1_len + str2_len + 1) * sizeof(char));
+	baseres = res;
 	while (*str1)
 	{
 		*res++ = *str1++;
@@ -114,5 +110,5 @@ char	*append_str(char *str1, char str2[])
 		*res++ = *str2++;
 	}
 	*res = '\0';
-	return (res);
+	return (baseres);
 }
