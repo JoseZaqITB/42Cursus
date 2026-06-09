@@ -6,13 +6,19 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:48:48 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/08 12:14:57 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/09 14:43:57 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	fn_strlen(char *str)
+void	add_substr(char *tempbuff, char *buffer, int endindex)
+{
+	tempbuff = ft_substr(tempbuff, 0, endindex + 1);
+	buffer = append_str(buffer, tempbuff);
+}
+
+int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -22,6 +28,58 @@ int	fn_strlen(char *str)
 		i++;
 	}
 	return (i);
+}
+
+char	*ft_strdup(char *src)
+{
+	char	*dpsrc;
+	int		length;
+	int		i;
+
+	length = sizeof(char);
+	i = 0;
+	while (src[i])
+	{
+		length += sizeof(char);
+		i++;
+	}
+	i = 0;
+	dpsrc = malloc(length);
+	if (!dpsrc)
+		return (0);
+	while (src[i])
+	{
+		dpsrc[i] = src[i];
+		i++;
+	}
+	dpsrc[i] = '\0';
+	return (dpsrc);
+}
+
+char	*ft_substr(char const *s, unsigned int start, int len)
+{
+	char	*ptr;
+	int		actualsize;
+	int		i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	actualsize = ft_strlen(s + start);
+	if (len > actualsize)
+		len = actualsize;
+	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (!ptr)
+		return (0);
+	while (i < len && s[start + i])
+	{
+		ptr[i] = s[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
 
 int	get_linebreak(char *buffer, int size)
@@ -44,8 +102,8 @@ char	*append_str(char *str1, char str2[])
 	int		str2_len;
 	char	*res;
 
-	str1_len = fn_strlen(str1);
-	str2_len = fn_strlen(str2);
+	str1_len = ft_strlen(str1);
+	str2_len = ft_strlen(str2);
 	res = malloc((str1_len * str2_len + 1) * sizeof(char));
 	while (*str1)
 	{
@@ -58,4 +116,3 @@ char	*append_str(char *str1, char str2[])
 	*res = '\0';
 	return (res);
 }
-
