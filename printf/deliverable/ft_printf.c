@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 17:58:29 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/29 13:50:22 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/09 10:21:26 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,11 @@ int	ft_printf(char const *str, ...)
 	while (*str)
 	{
 		if (*str == '%')
+		{
+			if (*(str + 1) == '\0')
+				break ;
 			n += printvar(*(++str), vargs);
+		}
 		else
 		{
 			ft_putchar_fd(*str, 1);
