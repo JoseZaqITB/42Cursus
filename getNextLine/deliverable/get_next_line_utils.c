@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:48:48 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/10 20:04:38 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:59:03 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len1;
 	size_t	len2;
 
-	str1 = (char *)s1;
-	str2 = (char *)s2;
+	str1 = "";
+	str2 = "";
+	if (s1)
+		str1 = (char *)s1;
+	if (s2)
+		str2 = (char *)s2;
 	len1 = ft_strlen(str1);
 	len2 = ft_strlen(str2);
 	ptr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
-	if (!s1 || !s2 || !ptr)
+	if (!ptr)
 		return (0);
 	addstr(ptr, str1, 0);
 	addstr(ptr, str2, len1);
@@ -57,25 +61,24 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (ptr);
 }
 
-
-int	ft_strchrn(const char *s, int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned char	chr;
-	char			*str;
-	int	i;
+	char	*source;
+	size_t	i;
+	size_t	srclen;
 
-	str = (char *)s;
-	chr = (unsigned char)c;
-	while (1)
+	source = (char *)src;
+	srclen = ft_strlen(src);
+	i = 0;
+	if (size == 0)
+		return (srclen);
+	while (i < (size - 1) && source[i])
 	{
-		if (*str == chr)
-			return (i);
-		if (!*str)
-			return (0);
-		str++;
+		dst[i] = source[i];
 		i++;
 	}
-	return (0);
+	dst[i] = '\0';
+	return (srclen);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -86,11 +89,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	if (start > ft_strlen(s))
-		return (ft_strdup(""));
+		return (ft_strjoin("",""));
 	actualsize = ft_strlen(s + start);
 	if (len > actualsize)
 		len = actualsize;
-	ptr = (char *)ft_calloc(len + 1, sizeof(char));
+	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (0);
 	ft_strlcpy(ptr, s + start, len + 1);
