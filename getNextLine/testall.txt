@@ -1,12 +1,6 @@
-En informática una variable estática es una variable que ha sido ubicada estáticamente y cuyo tiempo de vida se extiende durante toda la ejecución del programa. Normalmente una variable estática tiene un ámbito más amplio que otras variables. Los valores de variables estáticas se pueden establecer una vez (durante el tiempo de ejecución) o se pueden cambiar en múltiples ocasiones durante la ejecución del programa. La terminología "variable estática" se basa en C y C++, pero también se usa en muchos lenguajes de programación derivados. En lenguajes de diferente origen el mismo concepto puede denominarse "variable global".
+Hola.
+Chao.
+Perro y gato.
+Comparten mision.
 
-Constantes
-Los programas informáticos pueden almacenar constantes en variables constant o en variables static, dependiendo de las posibilidades del lenguaje de programación. Por ejemplo, un programa que usa una aproximación de pi es más fácil de escribir, leer y mantener con una variable llamada "PI" en lugar de múltiples ocurrencias de "3.14159".
-
-Ámbito
-En el lenguaje de programación C se usa static con variables globales y funciones para restringir su ámbito al archivo donde se definen. Con variables locales, static se usa para almacenar la variable en la memoria asignada de forma estática en lugar de en la memoria asignada de forma automática. Siempre y cuando el lenguaje no fije la implementación del tipo de memoria a usar, la memoria asignada de forma estática se reserva normalmente en el segmento de datos del programa durante la compilación, mientras que la memoria asignada de forma automática es normalmente implementada como pila de llamadas transitorio.
-
-Variables locales
-Artículo principal: Variable local
-La mayoría de los lenguajes de programación incluyen la posibilidad de usar subrutinas.
-Las variables de ámbito local en las subrutinas (variables locales) se crean y destruyen normalmente dentro de la propia subrutina (denominadas variable automática. Algunos lenguajes, sin embargo, (ej. lenguaje de programación C) permiten a las subrutinas retener el valor de las variables entre las llamadas a la función, de forma que la función puede preservar el valor de las variables si fuera necesario. Por ejemplo, una variable estática puede registrar el número de veces que una subrutina ha sido ejecutada. Para este propósito también es posible servirse de variables globales o de almacenamiento externo (ej. un archivo en un disco). Adicionalmente limita el ámbito del compilador de la variable en cuestión a esa función, incluso cuando el espacio asignado se encuentra en el área estática.
+fin.

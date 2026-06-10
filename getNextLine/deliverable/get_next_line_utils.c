@@ -6,57 +6,83 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:48:48 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/09 16:54:59 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:04:38 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
 		i++;
 	}
 	return (i);
 }
 
-char	*ft_strdup(char *src)
+void	addstr(char	*ptr, char *str, int start)
 {
-	char	*dpsrc;
-	int		length;
-	int		i;
+	int	i;
 
-	length = sizeof(char);
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		length += sizeof(char);
+		ptr[start + i] = str[i];
 		i++;
 	}
-	i = 0;
-	dpsrc = malloc(length);
-	if (!dpsrc)
-		return (0);
-	while (src[i])
-	{
-		dpsrc[i] = src[i];
-		i++;
-	}
-	dpsrc[i] = '\0';
-	return (dpsrc);
 }
 
-char	*ft_substr(char const *s, unsigned int start, int len)
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*str1;
+	char	*str2;
+	char	*ptr;
+	size_t	len1;
+	size_t	len2;
+
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	len1 = ft_strlen(str1);
+	len2 = ft_strlen(str2);
+	ptr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (!s1 || !s2 || !ptr)
+		return (0);
+	addstr(ptr, str1, 0);
+	addstr(ptr, str2, len1);
+	ptr[len1 + len2] = '\0';
+	return (ptr);
+}
+
+
+int	ft_strchrn(const char *s, int c)
+{
+	unsigned char	chr;
+	char			*str;
+	int	i;
+
+	str = (char *)s;
+	chr = (unsigned char)c;
+	while (1)
+	{
+		if (*str == chr)
+			return (i);
+		if (!*str)
+			return (0);
+		str++;
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
-	int		actualsize;
-	int		i;
+	size_t	actualsize;
 
-	i = 0;
 	if (!s)
 		return (0);
 	if (start > ft_strlen(s))
@@ -64,51 +90,9 @@ char	*ft_substr(char const *s, unsigned int start, int len)
 	actualsize = ft_strlen(s + start);
 	if (len > actualsize)
 		len = actualsize;
-	ptr = (char *)malloc((len + 1) * sizeof(char));
+	ptr = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
 		return (0);
-	while (i < len && s[start + i])
-	{
-		ptr[i] = s[start + i];
-		i++;
-	}
-	ptr[i] = '\0';
+	ft_strlcpy(ptr, s + start, len + 1);
 	return (ptr);
-}
-
-int	get_linebreak(char *buffer, int size)
-{
-	int	i;
-
-	i = 0;
-	while (i < size)
-	{
-		if (buffer[i] == '\n')
-			return (i);
-		i++;
-	}
-	return (-1);
-}
-
-char	*append_str(char *str1, char str2[])
-{
-	int		str1_len;
-	int		str2_len;
-	char	*res;
-	char	*baseres;
-
-	str1_len = ft_strlen(str1);
-	str2_len = ft_strlen(str2);
-	res = malloc((str1_len + str2_len + 1) * sizeof(char));
-	baseres = res;
-	while (*str1)
-	{
-		*res++ = *str1++;
-	}
-	while (*str2)
-	{
-		*res++ = *str2++;
-	}
-	*res = '\0';
-	return (baseres);
 }

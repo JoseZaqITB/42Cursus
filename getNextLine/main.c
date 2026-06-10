@@ -11,12 +11,12 @@ void	testall(void)
 
 	fd = open("./testall.txt", O_RDWR);
 	printf("fd: %d\n", fd);
-	while (line)
-	{
+	//while (line)
+	//{
 		line = "";
 		line = get_next_line(fd);
 		printf("|%s|\n", line);
-	}
+	//}
 	close(fd);
 }
 
@@ -38,7 +38,10 @@ int	main(void)
 		else if (in == 0)
 			return (0);
 		else
+		{
 			printf("Incorrect selection");
+			return (0);
+		}
 		printf("\n\n||---------------\n");
 	}
 	return (0);

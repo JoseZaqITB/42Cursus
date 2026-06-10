@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:30:40 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/09 14:40:48 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/10 20:03:42 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@
 # endif
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdint.h>
 
-char	*read_line(int fd);
 char	*get_next_line(int fd);
-int		get_linebreak(char *buffer, int size);
-char	*append_str(char *str1, char str2[]);
-void	add_substr(char *tempbuff, char *buffer, int endindex);
-char	*ft_substr(char const *s, unsigned int start, int len);
+char	*ft_strjoin(char const *s1, char const *s2);
+int		ft_strchrn(const char *s, int c);
 #endif
 
