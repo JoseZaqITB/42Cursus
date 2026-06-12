@@ -8,15 +8,18 @@ void	testall(void)
 {
 	char	*line;
 	int		fd;
+	int		in;
+
 
 	fd = open("./testall.txt", O_RDWR);
 	printf("fd: %d\n", fd);
-	//while (line)
-	//{
+	while (line)
+	{
+		scanf("%d", &in);
 		line = "";
 		line = get_next_line(fd);
 		printf("|%s|\n", line);
-	//}
+	}
 	close(fd);
 }
 

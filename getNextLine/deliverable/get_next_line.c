@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:30:17 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/11 21:09:49 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/12 18:05:56 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,7 @@ int	readbreakline(int fd, char **s)
 	{
 		curpos = get_breakline(buffer);
 		if (curpos != -1)
-		{
-			printf("%d", curpos);
 			return (breakpos + curpos);
-		}
 		breakpos += ft_strlen(buffer);
 		if (read(fd, buffer, BUFFER_SIZE) <= 0)
 			return (-1);
@@ -70,25 +67,27 @@ char	*get_next_line(int fd)
 	char	*line;
 
 	line = 0;
-	breakpos;
 	// if buffer is not empty, play with it
 	// if not, read a new bunch of bytes and play with them
+	printf("leftover: %s\n", leftover);
 
 	// 1. read() / getbreaklinefrombuffer()
-	if (!leftover)
+	if (!leftover || leftover[0] == '\0')
 	{
 		if (read(fd, buffer, BUFFER_SIZE) <= 0)
 			return (0);
 		tempbuffer = &buffer[0];
 	}
+	else
+		tempbuffer = leftover;
 	// 2. readbreakline()/get_breakline()
 	breakpos = readbreakline(fd, &tempbuffer);
-	printf("break: %d, tempBuffer: %s", breakpos, tempbuffer);
 	// 3. appendleftover()
-	tempbuffer = ft_strjoin(leftover, tempbuffer);
 	// 5. return_line()
 	line = ft_substr(tempbuffer, 0, breakpos);
 	// 4. saveleftover()
+	printf("tempbuffer: --%s--\n", tempbuffer);
 	leftover = ft_substr(tempbuffer, breakpos + 1, ft_strlen(tempbuffer) - (breakpos + 1));
+	printf("new leftover: --%s--\n", leftover);
 	return (line);
 }
