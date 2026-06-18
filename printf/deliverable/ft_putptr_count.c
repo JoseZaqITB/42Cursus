@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 12:45:25 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/29 13:51:12 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/18 18:20:38 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_putptrrec_count(unsigned long n, int count)
 	else
 	{
 		cnt += ft_putstr_count("0x");
-		ft_putchar_fd("0123465789abcdef"[n], 1);
+		ft_putchar_fd("0123456789abcdef"[n], 1);
 		cnt += ++count;
 	}
 	return (cnt);

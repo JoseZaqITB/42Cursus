@@ -128,10 +128,14 @@ void	testmix(void)
 {
 	int	n;
 	int	n2;
+	int	n3;
 
+	n = 0;
+	n2 = 0;
+	n3 = 100;
 	printhint();
-	n = printf("+: Oli: %s | %u | %c | %d | %i | %x | %X | %p | %u\n chai \n%","string", -1, '$', 4.1, 4.1, 345, 101, &n, -1);
-	n2 = ft_printf("-: Oli: %s | %u | %c | %d | %i | %x | %X | %p | %u\n chai \n%","string", -1, '$', 4.1, 4.1, 345, 101, &n, -1);
+	n = printf("+: Oli: %s | %u | %c | %d | %i | %x | %X | %p | %u\n chai \n%","string", -1, '$', 4.1, 4.1, 345, 101, &n3, -1);
+	n2 = ft_printf("-: Oli: %s | %u | %c | %d | %i | %x | %X | %p | %u\n chai \n%","string", -1, '$', 4.1, 4.1, 345, 101, &n3, -1);
 	returncmp(n, n2);
 }
 
