@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:30:17 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/25 17:28:39 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/25 19:08:17 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,21 @@ int	readbreakline(int fd, char **s)
 
 	curpos = 0;
 	breakpos = 0;
-	i = -1;
-	buffer = *s;
+	buffer = ft_strjoin("",*s);
 	while (1)
 	{
 		curpos = get_breakline(buffer);
+		i = ft_strlen(buffer);
+		free(buffer);
 		if (curpos != -1)
 			return (breakpos + curpos);
-		breakpos += ft_strlen(buffer);
+		breakpos += i;
 		buffer = readline(fd);
 		if (!buffer)
 			return (-1);
 		temp = *s;
 		*s = ft_strjoin(*s, buffer);
 		free(temp);
-		free(buffer);
 	}
 	return (breakpos);
 }
