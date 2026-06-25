@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:48:48 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/10 20:59:03 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/25 17:07:09 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	if (start > ft_strlen(s))
-		return (ft_strjoin("",""));
+		return (ft_strjoin("", ""));
 	actualsize = ft_strlen(s + start);
 	if (len > actualsize)
 		len = actualsize;

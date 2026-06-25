@@ -18,8 +18,11 @@ void	testall(void)
 	{
 		// scanf("%d", &in);
 		printf("|%s|\n", line);
+		if (line != "")
+			free(line);
 		line = get_next_line(fd);
 	}
+	free(line);
 	close(fd);
 }
 
