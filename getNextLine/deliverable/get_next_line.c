@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:30:17 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/25 19:08:17 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/26 17:49:18 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,21 +85,22 @@ char	*get_next_line(int fd)
 	int			breakpos;
 	char		*line;
 
-	line = 0;
 	if (!leftover || leftover[0] == '\0')
 	{
 		tempbuffer = readline(fd);
+		free(leftover);
+		leftover = 0;
 		if (!tempbuffer)
-		{
-			free(leftover);
-			leftover = 0;
 			return (0);
-		}
 	}
 	else
 		tempbuffer = leftover;
 	breakpos = readbreakline(fd, &tempbuffer);
-	line = ft_substr(tempbuffer, 0, breakpos);
+	if (breakpos == -1)
+	{
+		return (tempbuffer);
+	}
+	line = ft_substr(tempbuffer, 0, breakpos + 1);
 	leftover = ft_substr_from(tempbuffer, breakpos + 1);
 	free(tempbuffer);
 	return (line);
