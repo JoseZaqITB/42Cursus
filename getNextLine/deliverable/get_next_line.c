@@ -6,7 +6,7 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:30:17 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/30 15:15:08 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/30 18:03:41 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,14 +79,14 @@ int	readbreakline(int fd, char **s)
 	return (breakpos);
 }
 
-char	*ft_substr_from(char src[], char *s, int start)
+void	ft_substr_from(char src[], char *s, int start)
 {
 	char	*temp;
 	int		i;
 
 	i = 0;
 	if (!s || s[0] == '\0')
-		return (0);
+		return ;
 	temp = ft_substr(s, start, ft_strlen(s) - start);
 	while (temp[i] && i < 1023)
 	{
@@ -95,7 +95,7 @@ char	*ft_substr_from(char src[], char *s, int start)
 	}
 	src[i] = '\0';
 	free(temp);
-	return (s);
+	free(s);
 }
 
 char	*get_next_line(int fd)
@@ -106,23 +106,24 @@ char	*get_next_line(int fd)
 	char		*line;
 
 	if (leftover[0] == '\0')
-	{
 		tempbuffer = readline(fd, &breakpos);
-		if (!tempbuffer)
-			return (0);
-	}
 	else
 		tempbuffer = ft_strjoin("", leftover);
+	if (!tempbuffer)
+		return (0);
 	breakpos = readbreakline(fd, &tempbuffer);
 	if (breakpos <= -1)
 	{
 		leftover[0] = 0;
 		if (breakpos == -2)
+		{
+			free(tempbuffer);
 			return (0);
+		}
 		return (tempbuffer);
 	}
 	line = ft_substr(tempbuffer, 0, breakpos + 1);
 	ft_substr_from(leftover, tempbuffer, breakpos + 1);
-	free(tempbuffer);
 	return (line);
 }
+// QUITAR STDIO
