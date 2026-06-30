@@ -6,14 +6,14 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:30:17 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/29 19:30:26 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/06/30 15:15:08 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 #include <stdio.h>
 
-char	*readline(int fd)
+char	*readline(int fd, int *status)
 {
 	char	*buffer;
 	int		readcount;
@@ -24,6 +24,7 @@ char	*readline(int fd)
 	if (readcount <= 0)
 	{
 		free(buffer);
+		*status = readcount - 1;
 		return (0);
 	}
 	buffer[readcount] = '\0';
@@ -68,9 +69,9 @@ int	readbreakline(int fd, char **s)
 		if (curpos != -1)
 			return (breakpos + curpos);
 		breakpos += i;
-		buffer = readline(fd);
+		buffer = readline(fd, &breakpos);
 		if (!buffer)
-			return (-1);
+			return (breakpos);
 		temp = *s;
 		*s = ft_strjoin(*s, buffer);
 		free(temp);
@@ -106,16 +107,18 @@ char	*get_next_line(int fd)
 
 	if (leftover[0] == '\0')
 	{
-		tempbuffer = readline(fd);
+		tempbuffer = readline(fd, &breakpos);
 		if (!tempbuffer)
 			return (0);
 	}
 	else
 		tempbuffer = ft_strjoin("", leftover);
 	breakpos = readbreakline(fd, &tempbuffer);
-	if (breakpos == -1)
+	if (breakpos <= -1)
 	{
 		leftover[0] = 0;
+		if (breakpos == -2)
+			return (0);
 		return (tempbuffer);
 	}
 	line = ft_substr(tempbuffer, 0, breakpos + 1);
