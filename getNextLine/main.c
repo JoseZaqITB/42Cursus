@@ -85,6 +85,15 @@ void	testerror()
 	close(fd);
 }
 
+void	testlong()
+{
+	int		fd;
+
+	fd = open("./deliverable_test/test3/files/long_line.txt", O_RDWR);
+	readlines(fd);
+	close(fd);
+}
+
 int	main(void)
 {
 	int	in;
@@ -98,7 +107,7 @@ int	main(void)
 			"3. Leer una sola linea\n"
 			"4. Leer una archivo nls\n"
 			"5. Leer una archivo de error\n"
-			"6. Leer una archivo de varios nl\n"
+			"6. Leer una archivo largo\n"
 			"0. end\n"
 			);
 		scanf("%d", &in);
@@ -113,6 +122,8 @@ int	main(void)
 			testnls();
 		else if (in == 5)
 			testerror();
+		else if (in == 6)
+			testlong();
 		else if (in == 0)
 			return (0);
 		else
