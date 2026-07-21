@@ -40,43 +40,42 @@ ccc ./*.c -I.
 
 ## Details and Algorithm
 
-### get_next_line(int fd)
-Purpose: The main conductor of the operation. It manages the lifecycle of the string extraction and maintains state between function calls using a static variable.
+The core logic of `get_next_line` is divided into four main modular functions. Each handles a specific phase of the reading, extraction, and memory lifecycle to ensure stability across multiple file descriptors and high buffer sizes.
 
-How it works: * It initializes or recovers the data (tempbuffer) using the static pointer leftover.
+---
 
-It calls readbreakline to find out exactly where the current line ends.
+### 1. `get_next_line(int fd)`
+* **Description:** The entry point of the module. It orchestrates the line extraction process and maintains state between function calls.
+* **Key Mechanics:**
+  * Uses a static pointer array `static char *leftover[FD_SETSIZE]` to store unread buffer data individually for each open file descriptor.
+  * Validates the input parameters (`fd` range and `BUFFER_SIZE > 0`).
+  * Triggers the reading engine (`read_and_stash`), pulls the next available line (`extract_line`), and updates the persistent storage (`save_leftover`).
 
-It uses ft_substr to extract the line to return, and updates leftover using ft_substr_from to hold any remaining characters for the next call.
+---
 
-### readline(int fd)
-Purpose: A helper function that reads a small chunk of data (up to BUFFER_SIZE) from the file.
+### 2. `read_and_stash(int fd, char *stash)`
+* **Description:** Reads chunks of data from the file descriptor into a heap buffer until a newline (`\n`) character is found or the end of the file (EOF) is reached.
+* **Key Mechanics:**
+  * Dynamically allocates a buffer of size `BUFFER_SIZE + 1`.
+  * Loops with `read()` calls, continuously joining newly read strings onto the existing `stash`.
+  * Safely frees temporary intermediate strings during the `ft_strjoin` loops to prevent memory leaks.
+  * Handles read errors by clearing allocated memory and returning `NULL`.
 
-How it works: * Allocates a stack-based buffer of size BUFFER_SIZE + 1.
+---
 
-Calls read(). If it hits EOF or an error, it returns 0.
+### 3. `extract_line(char *stash)`
+* **Description:** Scans the accumulated `stash` string to isolate and extract a single, complete line to be returned to the caller.
+* **Key Mechanics:**
+  * Searches for the index of the first occurrence of `\n`.
+  * Extracts the string from index `0` up to and including the newline character (if present) using `ft_substr`.
+  * Returns `NULL` if the input `stash` is empty or invalid.
 
-Null-terminates the buffer at readcount and duplicates it into a heap-allocated string via ft_strjoin("", &buffer[0]) so it can be safely manipulated and freed later.
+---
 
-### get_breakline(const char *s)
-Purpose: Scans a single string to find the index of the first newline character (\n).
-
-How it works: * Loops through the string s.
-
-If it finds \n, it immediately returns its index (i).
-
-If it hits the null-terminator (\0) without finding a newline, it returns -1.
-
-### readbreakline(int fd, char s)
-Purpose: The engine that driving the reading loop. It ensures that the accumulation string *s contains at least one newline or has reached the end of the file.
-
-How it works: * It checks if a newline exists in the current chunk using get_breakline.
-
-If no newline is found, it updates breakpos (keeping track of the total characters scanned so far), reads the next chunk with readline, joins it to the accumulating string *s, and loops again.
-
-Once a newline is found, it calculates and returns the absolute index of the newline relative to the start of the whole accumulated string.
-
-### ft_substr_from(char *s, int start)
-Purpose: A syntactic sugar wrapper around your standard ft_substr.
-
-How it works: It extracts everything from the index start right up to the very end of the string s. This is specifically used to isolate the remaining data for the leftover static variable.
+### 4. `save_leftover(char *stash)`
+* **Description:** Cleans up the `stash` by trimming away the line that was just extracted, retaining only the remaining data for future calls.
+* **Key Mechanics:**
+  * Finds the position of the `\n` character and isolates everything *after* it.
+  * Creates a new heap-allocated string containing only the leftover characters.
+  * Frees the old `stash` memory to avoid dangling pointers and leaks.
+  * Returns `NULL` and frees memory if no leftover data remains.
