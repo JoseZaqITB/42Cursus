@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:30:17 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/07/21 10:46:53 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/07/21 10:49:08 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -91,22 +91,22 @@ char	*save_leftover(char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*leftover;
+	static char	*leftover[1024];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd >= 1024 || BUFFER_SIZE <= 0)
 		return (0);
-	if (!leftover)
+	if (!leftover[fd])
 	{
-		leftover = malloc(sizeof(char) * 1);
-		if (!leftover)
+		leftover[fd] = malloc(sizeof(char) * 1);
+		if (!leftover[fd])
 			return (0);
-		leftover[0] = '\0';
+		leftover[fd][0] = '\0';
 	}
-	leftover = read_and_stash(fd, leftover);
-	if (!leftover)
+	leftover[fd] = read_and_stash(fd, leftover[fd]);
+	if (!leftover[fd])
 		return (0);
-	line = extract_line(leftover);
-	leftover = save_leftover(leftover);
+	line = extract_line(leftover[fd]);
+	leftover[fd] = save_leftover(leftover[fd]);
 	return (line);
 }

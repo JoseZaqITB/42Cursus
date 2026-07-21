@@ -7,13 +7,14 @@
 void	readlines(int fd)
 {
 	char	*line;
+	//char	*in;
 
 	printf("fd: %d\n", fd);
 	line = "";
 
 	while (line)
 	{
-		// scanf("%d", &in);
+		//scanf("%d", &in);
 		printf("|%s|", line);
 		if (line != "")
 			free(line);

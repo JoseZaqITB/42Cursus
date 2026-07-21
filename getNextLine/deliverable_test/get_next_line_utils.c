@@ -6,23 +6,11 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 16:48:48 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/06/26 17:47:07 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/07/21 10:03:22 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
 
 void	addstr(char	*ptr, char *str, int start)
 {
@@ -98,4 +86,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	ft_strlcpy(ptr, s + start, len + 1);
 	return (ptr);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	unsigned char	chr;
+	char			*str;
+
+	str = (char *)s;
+	chr = (unsigned char)c;
+	while (1)
+	{
+		if (*str == chr)
+			return (str);
+		if (!*str)
+			return (0);
+		str++;
+	}
+	return (0);
 }
