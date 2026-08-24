@@ -6,15 +6,13 @@
 /*   By: jzaquina <jzaquina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:12:20 by jzaquina          #+#    #+#             */
-/*   Updated: 2026/05/09 17:09:28 by jzaquina         ###   ########.fr       */
+/*   Updated: 2026/07/31 12:41:13 by jzaquina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
 # include <stdlib.h>
-# include <stdint.h>
 # include <unistd.h>
 
 typedef struct s_list
