@@ -1,0 +1,4 @@
+[flake8]
+exclude = .venv,.git,__pycache__,.vscode
+# optional: increase allowed line length
+# max-line-length = 88
