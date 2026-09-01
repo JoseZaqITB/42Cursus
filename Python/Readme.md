@@ -15,5 +15,6 @@ deactivate
 
 ## Packages installed
 - flake8
+-  pep8-naming: for naming rules ( automatically added to flake8 rules)
 
 
